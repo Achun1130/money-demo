@@ -18,15 +18,6 @@ export default defineNuxtConfig({
     /** Options */
     importStyle: 'scss',
   },
-  vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: '@use "@/assets/scss/abstracts/_element-plus.scss";',
-        },
-      },
-    },
-  },
   typescript: {
     typeCheck: true,
   },
