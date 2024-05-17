@@ -1,0 +1,116 @@
+#money .el-button {
+  height: var(--button-height);
+  font-size: var(--button-font-size);
+  padding: var(--button-padding-vertical) var(--button-padding-horizontal);
+  font-weight: 700;
+
+  &:hover {
+    @apply shadow-button-hover;
+  }
+
+  &--large {
+    height: var(--button-height-large);
+    font-size: var(--button-font-size-large);
+    padding: var(--button-padding-vertical-large)
+      var(--button-padding-horizontal-large);
+  }
+
+  &--small {
+    height: var(--button-height-small);
+    font-size: var(--button-font-size-small);
+    padding: var(--button-padding-vertical-small)
+      var(--button-padding-horizontal-small);
+  }
+
+  &--primary {
+    --el-button-text-color: rgb(var(--sys-color-on-primary));
+    --el-button-bg-color: rgb(var(--sys-color-primary));
+    --el-button-border-color: rgb(var(--sys-color-primary));
+    --el-button-outline-color: rgb(var(--sys-color-primary));
+    --el-button-active-color: rgb(var(--sys-color-primary-30));
+    --el-button-hover-text-color: rgb(var(--sys-color-on-primary));
+    --el-button-hover-link-text-color: rgb(var(--sys-color-primary));
+    --el-button-hover-bg-color: rgb(var(--sys-color-primary-30));
+    --el-button-hover-border-color: rgb(var(--sys-color-primary-30));
+    --el-button-active-bg-color: rgb(var(--sys-color-primary-30));
+    --el-button-active-border-color: rgb(var(--sys-color-primary-30));
+    --el-button-disabled-text-color: rgb(var(--sys-color-on-primary));
+    --el-button-disabled-bg-color: rgb(var(--sys-color-primary-90));
+    --el-button-disabled-border-color: rgb(var(--sys-color-primary-90));
+
+    &.is-plain {
+      --el-button-text-color: rgb(var(--sys-color-primary));
+      --el-button-bg-color: rgb(var(--sys-color-on-primary));
+      --el-button-border-color: rgb(var(--sys-color-primary));
+      --el-button-hover-text-color: rgb(var(--sys-color-primary-30));
+      --el-button-hover-bg-color: rgb(var(--sys-color-primary-99));
+      --el-button-hover-border-color: rgb(var(--sys-color-primary-30));
+      --el-button-active-text-color: rgb(var(--sys-color-primary-30));
+      --el-button-active-bg-color: rgb(var(--sys-color-primary-99));
+      --el-button-active-border-color: rgb(var(--sys-color-primary-30));
+
+      &.is-disabled,
+      &.is-disabled:hover,
+      &.is-disabled:focus,
+      &.is-disabled:active {
+        color: rgb(var(--sys-color-primary-90));
+        background-color: rgb(var(--sys-color-on-primary));
+        border-color: rgb(var(--sys-color-primary-90));
+      }
+    }
+
+    &.is-text {
+      --el-button-text-color: rgb(var(--sys-color-primary));
+      --el-button-bg-color: transparent;
+      --el-button-border-color: transparent;
+      --el-button-hover-text-color: rgb(var(--sys-color-primary-30));
+      --el-button-hover-bg-color: transparent;
+      --el-button-hover-border-color: transparent;
+      --el-button-active-text-color: rgb(var(--sys-color-primary-30));
+      --el-button-active-bg-color: transparent;
+      --el-button-active-border-color: transparent;
+
+      &:hover {
+        @apply shadow-none;
+      }
+
+      &:not(.is-disabled):hover,
+      &:not(.is-disabled):active {
+        color: rgb(var(--sys-color-primary-30));
+        background-color: transparent;
+      }
+
+      &.is-disabled,
+      &.is-disabled:hover,
+      &.is-disabled:focus,
+      &.is-disabled:active {
+        color: rgb(var(--sys-color-primary-90));
+        background-color: transparent;
+        border-color: transparent;
+      }
+    }
+  }
+
+  &.is-round {
+    --el-border-radius-round: var(--button-border-radius-round);
+    padding: var(--button-padding-vertical) var(--button-padding-horizontal);
+  }
+
+  &.is-round.el-button--large {
+    padding: var(--button-padding-vertical-large)
+      var(--button-padding-horizontal-large);
+  }
+
+  &.is-round.el-button--small {
+    padding: var(--button-padding-vertical-small)
+      var(--button-padding-horizontal-small);
+  }
+
+  &.is-circle {
+    width: var(--button-circle-width);
+    height: var(--button-circle-height);
+    padding: var(--button-circle-padding-vertical)
+      var(--button-circle-padding-horizontal);
+    font-size: var(--button-circle-font-size);
+  }
+}

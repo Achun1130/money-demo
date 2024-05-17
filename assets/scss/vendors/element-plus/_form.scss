@@ -1,0 +1,74 @@
+#money {
+  .el-form-item {
+    margin-bottom: var(--form-item-error-height);
+  }
+
+  .el-form-item__label {
+    @apply text-label font-bold;
+  }
+
+  .el-input,
+  .el-textarea {
+    --el-input-text-color: rgb(var(--sys-color-on-surface));
+    --el-input-border: 1px solid rgb(var(--sys-color-outline));
+    --el-input-hover-border: rgb(var(--sys-color-primary));
+    --el-input-focus-border: rgb(var(--sys-color-primary-40));
+    --el-input-border-color: rgb(var(--sys-color-outline));
+    --el-input-bg-color: rgb(var(--sys-color-surface));
+    --el-input-icon-color: rgb(var(--sys-color-on-surface-variant));
+    --el-input-placeholder-color: rgb(var(--sys-color-neutral-80));
+    --el-input-hover-border-color: rgb(var(--sys-color-primary));
+    --el-input-focus-border-color: rgb(var(--sys-color-primary-40));
+    --el-input-height: var(--input-height);
+
+    --el-color-danger: rgb(var(--sys-color-error));
+
+    --el-disabled-bg-color: rgb(var(--sys-color-surface-container-low));
+    --el-disabled-border-color: rgb(var(--sys-color-outline));
+    --el-disabled-text-color: rgb(var(--sys-color-neutral-80));
+
+    @apply text-placeholder;
+  }
+
+  .el-input {
+    &:has(.is-focus) {
+      @apply shadow-input-focused;
+    }
+
+    .el-input__icon {
+      font-size: var(--input-icon-font-size);
+    }
+
+    &.input--rounded {
+      --el-input-border-radius: var(--input-border-radius-rounded);
+
+      // for shadow-input-focused
+      border-radius: var(--el-input-border-radius);
+    }
+  }
+
+  .el-textarea {
+    &:has(textarea:focus) {
+      @apply shadow-input-focused;
+    }
+
+    textarea {
+      padding: var(--textarea-padding-vertical)
+        var(--textarea-padding-horizontal);
+    }
+  }
+
+  .el-form-item__error {
+    --el-color-danger: rgb(var(--sys-color-error));
+
+    @apply text-label font-bold;
+  }
+
+  .el-input__prefix-inner > :last-child {
+    margin-right: var(--input-icon-gap);
+  }
+
+  .el-input__suffix-inner > :first-child {
+    margin-left: var(--input-icon-gap);
+  }
+}

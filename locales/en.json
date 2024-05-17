@@ -1,0 +1,58 @@
+{
+  "hello": "hello",
+  "world": "world",
+  "english": "english",
+  "chinese": "chinese",
+  "typography": {
+    "font-family": "roboto",
+    "display": {
+      "large": "display large",
+      "medium": "display medium",
+      "small": "display small"
+    },
+    "headline": {
+      "large": "headline large",
+      "medium": "headline medium",
+      "small": "headline small"
+    },
+    "title": {
+      "large": "title large",
+      "medium": "title medium",
+      "small": "title small"
+    },
+    "label": "label",
+    "placeholder": "placeholder",
+    "button": {
+      "large": "button large",
+      "medium": "button medium",
+      "small": "button small"
+    },
+    "content": {
+      "large": "content large",
+      "medium": "content medium",
+      "small": "content small"
+    }
+  },
+  "button": {
+    "login": "login",
+    "info": "information",
+    "more": "more"
+  },
+  "input": {
+    "confirm_password": {
+      "label": "Confirm Password",
+      "message": "Required",
+      "placeholder": "Please input confirm password"
+    },
+    "keyword": {
+      "placeholder": "Please input keyword"
+    },
+    "content": {
+      "label": "Content",
+      "message": "Required",
+      "placeholder": "Please input content"
+    },
+    "submit": "submit",
+    "reset": "reset"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "hello": "哈囉",
+  "world": "世界",
+  "english": "英文",
+  "chinese": "中文",
+  "typography": {
+    "font-family": "微軟正黑體",
+    "display": {
+      "large": "大字體",
+      "medium": "中字體",
+      "small": "小字體"
+    },
+    "headline": {
+      "large": "大標題",
+      "medium": "中標題",
+      "small": "小標題"
+    },
+    "title": {
+      "large": "大標題",
+      "medium": "中標題",
+      "small": "小標題"
+    },
+    "label": "標籤文字",
+    "placeholder": "輸入框文字",
+    "button": {
+      "large": "大按鈕文字",
+      "medium": "中按鈕文字",
+      "small": "小按鈕文字"
+    },
+    "content": {
+      "large": "大內文文字",
+      "medium": "中內文文字",
+      "small": "小內文文字"
+    }
+  },
+  "button": {
+    "login": "登入",
+    "info": "詳細資訊",
+    "more": "查看更多"
+  },
+  "input": {
+    "confirm_password": {
+      "label": "確認密碼",
+      "message": "必填",
+      "placeholder": "請輸入確認密碼"
+    },
+    "keyword": {
+      "placeholder": "請輸入關鍵字搜尋"
+    },
+    "content": {
+      "label": "內容",
+      "message": "必填",
+      "placeholder": "請輸入文字內容"
+    },
+    "submit": "提交",
+    "reset": "重設"
+  }
+}
