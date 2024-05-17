@@ -36,4 +36,5 @@ export default defineNuxtConfig({
     defaultLocale: 'zh-tw',
     strategy: 'no_prefix',
   },
+  ssr: false
 });
