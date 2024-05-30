@@ -18,12 +18,24 @@ const links = reactive<Link[]>([
     title: 'Typography',
   },
   {
+    path: '/demo/layout',
+    title: 'Layout',
+  },
+  {
     path: '/demo/buttons',
     title: 'Buttons',
   },
   {
     path: '/demo/input',
     title: 'Input',
+  },
+  {
+    path: '/demo/card',
+    title: 'Card',
+  },
+  {
+    path: '/demo/list',
+    title: 'List',
   },
   {
     path: '/demo/i18n',
