@@ -12,7 +12,7 @@ export default defineNuxtConfig({
         },
       ],
     },
-    baseURL: './',
+    baseURL: process.env.NODE_ENV === 'production' ? '/money-demo/' : './',
   },
   modules: ['@element-plus/nuxt', '@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
   elementPlus: {
