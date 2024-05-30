@@ -32,7 +32,8 @@ jobs:
       - name: Install & Build # 執行指令
         run: |
           npm install
-          npm run generate 
+          npm run generate
+          touch ./.output/public/.nojekyll
                     
       # Runs a single command using the runners shell
       - name: Deploy
