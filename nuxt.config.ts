@@ -8,7 +8,7 @@ export default defineNuxtConfig({
         {
           rel: 'icon',
           type: 'image/png',
-          href: '/favicon.png',
+          href: `${process.env.NODE_ENV === 'production' ? '/money-demo/' : '/'}favicon.png`,
         },
       ],
     },
