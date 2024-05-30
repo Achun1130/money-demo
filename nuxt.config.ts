@@ -12,6 +12,7 @@ export default defineNuxtConfig({
         },
       ],
     },
+    baseURL: './',
   },
   modules: ['@element-plus/nuxt', '@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
   elementPlus: {
