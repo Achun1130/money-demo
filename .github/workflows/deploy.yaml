@@ -34,9 +34,11 @@ jobs:
 
       - name: Install
         run: npm install
-        env:
-          NUXT_PUBLIC_API_SERVER: ${{ vars.NUXT_PUBLIC_API_SERVER }}
-          NUXT_PUBLIC_USE_FAKE_DATA: ${{ vars.NUXT_PUBLIC_USE_FAKE_DATA }}
+
+      - name: Generate Environment
+        run: echo "NUXT_PUBLIC_API_SERVER=${{ vars.NUXT_PUBLIC_API_SERVER }}"
+        run: echo "NUXT_PUBLIC_API_SERVER=${{ vars.NUXT_PUBLIC_API_SERVER }}" >> .env.production
+        run: echo "NUXT_PUBLIC_USE_FAKE_DATA=${{ vars.NUXT_PUBLIC_USE_FAKE_DATA }}" >> .env.production
 
       - name: Build
         run: npm run generate

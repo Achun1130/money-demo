@@ -5,7 +5,7 @@
   "scripts": {
     "build": "vue-tsc --noEmit && nuxt build --dotenv .env.production",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "vue-tsc --noEmit && nuxt generate --dotenv .env.production",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
