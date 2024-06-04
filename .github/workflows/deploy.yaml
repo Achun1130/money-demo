@@ -37,7 +37,6 @@ jobs:
 
       - name: Generate Environment
         run: |
-          echo "NUXT_PUBLIC_API_SERVER=${{ vars.NUXT_PUBLIC_API_SERVER }}"
           echo "NUXT_PUBLIC_API_SERVER=${{ vars.NUXT_PUBLIC_API_SERVER }}" >> .env.production
           echo "NUXT_PUBLIC_USE_FAKE_DATA=${{ vars.NUXT_PUBLIC_USE_FAKE_DATA }}" >> .env.production
 
