@@ -4,7 +4,7 @@ name: deploy
 permissions:
   contents: write
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
@@ -28,13 +28,22 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
-      
-      - name: Install & Build # 執行指令
-        run: |
-          npm install
-          npm run generate
-          touch ./.output/public/.nojekyll
-                    
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install
+        run: npm install
+        env:
+          NUXT_PUBLIC_API_SERVER: ${{ vars.NUXT_PUBLIC_API_SERVER }}
+          NUXT_PUBLIC_USE_FAKE_DATA: ${{ vars.NUXT_PUBLIC_USE_FAKE_DATA }}
+
+      - name: Build
+        run: npm run generate
+
+      - name: Generate .nojekyll file
+        run: touch ./.output/public/.nojekyll
+
       # Runs a single command using the runners shell
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4

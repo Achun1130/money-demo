@@ -37,4 +37,11 @@ export default defineNuxtConfig({
     defaultLocale: 'zh-tw',
     strategy: 'no_prefix',
   },
+  runtimeConfig: {
+    public: {
+      apiServer: process.env.NUXT_PUBLIC_API_SERVER,
+      useFakeData: process.env.NUXT_PUBLIC_USE_FAKE_DATA,
+    },
+  },
+  plugins: ['~/plugins/http'],
 });
