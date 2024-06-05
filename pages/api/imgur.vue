@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { UploadFile, UploadFiles, UploadRawFile } from 'element-plus';
+
 definePageMeta({
   layout: 'demo',
 });
@@ -9,17 +11,15 @@ const imageUrl = ref('');
 //   .getImage('7AqmOHl')
 //   .then((res) => {
 //     console.log(res);
+
+//     imageUrl.value = res.data.link;
 //   });
 
-function uploadFile(e: Event): void {
-  const target = e.target as HTMLInputElement;
-
-  if (target.files === null) return;
-
-  const file = target.files[0];
+function uploadFile(uploadFile: UploadFile, uploadFiles: UploadFiles): void {
+  const file = uploadFile;
   const formData = new FormData();
 
-  formData.append('image', file, file.name);
+  formData.append('image', file.raw as UploadRawFile, file.name);
   formData.append('type', 'file');
   formData.append('title', 'title');
   formData.append('description', 'description');
@@ -35,6 +35,54 @@ function uploadFile(e: Event): void {
 </script>
 
 <template>
-  <input type="file" @change="uploadFile" />
-  <img :src="imageUrl" class="w-60" />
+  <div class="flex h-dvh items-center justify-center">
+    <el-upload
+      class="avatar-uploader"
+      :show-file-list="false"
+      :auto-upload="false"
+      :on-change="uploadFile"
+      multiple
+    >
+      <img
+        v-if="imageUrl"
+        :src="imageUrl"
+        class="avatar"
+        referrerpolicy="no-referrer"
+      />
+      <el-icon v-else class="avatar-uploader-icon">
+        <el-icon-plus />
+      </el-icon>
+    </el-upload>
+  </div>
 </template>
+
+<style lang="scss">
+.avatar-uploader {
+  .avatar {
+    width: 178px;
+    height: 178px;
+    display: block;
+  }
+
+  .el-upload {
+    border: 1px dashed var(--el-border-color);
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: var(--el-transition-duration-fast);
+
+    &:hover {
+      border-color: var(--el-color-primary);
+    }
+  }
+
+  .el-icon.avatar-uploader-icon {
+    font-size: 28px;
+    color: #8c939d;
+    width: 178px;
+    height: 178px;
+    text-align: center;
+  }
+}
+</style>
