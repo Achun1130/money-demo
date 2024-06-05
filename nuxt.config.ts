@@ -41,6 +41,9 @@ export default defineNuxtConfig({
     public: {
       apiServer: process.env.NUXT_PUBLIC_API_SERVER,
       useFakeData: process.env.NUXT_PUBLIC_USE_FAKE_DATA,
+      imgur: {
+        clientId: process.env.NUXT_PUBLIC_IMGUR_CLIENT_ID,
+      },
     },
   },
   plugins: ['~/plugins/http'],

@@ -14,11 +14,14 @@ export default defineNuxtPlugin(({ $config }) => {
   };
   const http = axios.create({
     baseURL: $config.public.apiServer,
-    // headers: {
+    headers: {
     //   post: {
     //     'Content-Type': 'application/json',
     //   },
-    // },
+      common: {
+        Authorization: `Client-ID ${$config.public.imgur.clientId}`,
+      },
+    },
   });
 
   http.interceptors.request.use(
