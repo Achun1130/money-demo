@@ -39,7 +39,7 @@ jobs:
         run: |
           echo "NUXT_PUBLIC_API_SERVER=${{ vars.NUXT_PUBLIC_API_SERVER }}" >> .env.production
           echo "NUXT_PUBLIC_USE_FAKE_DATA=${{ vars.NUXT_PUBLIC_USE_FAKE_DATA }}" >> .env.production
-          echo "NUXT_PUBLIC_IMGUR_CLIENT_ID=${{ secrets.NUXT_PUBLIC_IMGUR_CLIENT_ID }}" >> .env.production
+          echo "NUXT_PUBLIC_IMGUR_CLIENT_ID=${{ vars.NUXT_PUBLIC_IMGUR_CLIENT_ID }}" >> .env.production
 
       - name: Build
         run: npm run generate
