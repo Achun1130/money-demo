@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-await useApi()
-  .getListOfAllObjects()
-  .then((res) => {
-    console.log(res);
+// await useApi()
+//   .getListOfAllObjects()
+//   .then((res) => {
+//     console.log(res);
 
-    // res.forEach((el) => {
-    //   console.log(el.id, el.name);
-    // });
-  });
+//     // res.forEach((el) => {
+//     //   console.log(el.id, el.name);
+//     // });
+//   });
 
 // await useApi()
 //   .getObject('ff8081818fb998eb018fe17ab92b3cf3')
