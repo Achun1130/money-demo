@@ -38,6 +38,14 @@ const links = reactive<Link[]>([
     title: 'List',
   },
   {
+    path: '/demo/tag',
+    title: 'Tag',
+  },
+  {
+    path: '/demo/table',
+    title: 'Table',
+  },
+  {
     path: '/demo/i18n',
     title: 'I18n',
   },
@@ -45,7 +53,7 @@ const links = reactive<Link[]>([
 </script>
 
 <template>
-  <div class="flex gap-4 p-20">
+  <div class="flex flex-wrap gap-4 p-20">
     <el-button
       type="primary"
       text
