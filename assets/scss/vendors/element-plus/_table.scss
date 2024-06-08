@@ -1,0 +1,26 @@
+#money .el-table {
+  --el-table-border-color: rgb(var(--sys-color-outline-variant));
+  --el-table-text-color: rgb(Var(--sys-color-on-surface));
+  --el-table-header-text-color: rgb(Var(--sys-color-on-surface));
+  --el-table-header-bg-color: rgb(var(--sys-color-neutral-variant-100));
+  --el-table-bg-color: rgb(var(--sys-color-neutral-variant-100));
+  --el-table-tr-bg-color: rgb(var(--sys-color-neutral-variant-100));
+  --el-table-expanded-cell-bg-color: rgb(var(--sys-color-neutral-variant-100));
+
+  @apply text-button-l;
+
+  .el-table__header {
+    --el-table-border-color: rgb(var(--sys-color-outline));
+    --el-table-border: 1px solid var(--el-table-border-color);
+
+    font-weight: 700;
+  }
+
+  .el-table__cell {
+    padding: var(--table-cell-padding-vertical) 0;
+  }
+
+  .cell {
+    padding: 0 var(--table-cell-padding-horizontal);
+  }
+}

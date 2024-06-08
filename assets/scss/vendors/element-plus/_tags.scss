@@ -1,0 +1,49 @@
+#money .el-tag {
+  --el-tag-font-size: var(--tag-font-size);
+  --el-tag-border-radius: var(--tag-border-radius);
+  --el-tag-text-color: rgb(var(--sys-color-on-primary-container));
+  --el-tag-bg-color: rgb(var(--sys-color-primary-container));
+  --el-tag-border-color: rgb(var(--sys-color-on-primary-container));
+  --el-tag-hover-color: rgb(var(--sys-color-on-primary-container));
+  --el-icon-size: --tag-icon-size;
+
+  height: var(--tag-height);
+  padding: var(--tag-padding-vertical) var(--tag-padding-horizontal);
+  font-weight: 700;
+
+  @apply text-button-m;
+
+  .el-icon {
+    padding: var(--tag-icon-padding-vertical) var(--tag-icon-padding-horizontal);
+
+    svg {
+      width: var(--tag-svg-width);
+      height: var(--tag-svg-height);
+    }
+  }
+
+  .el-tag__close {
+    margin-left: var(--tag-close-gap);
+  }
+
+  &.el-tag--success {
+    --el-tag-text-color: rgb(var(--sys-color-on-success-container));
+    --el-tag-bg-color: rgb(var(--sys-color-success-container));
+    --el-tag-border-color: rgb(var(--sys-color-on-success-container));
+    --el-tag-hover-color: rgb(var(--sys-color-on-success-container));
+  }
+
+  &.el-tag--danger {
+    --el-tag-text-color: rgb(var(--sys-color-error));
+    --el-tag-bg-color: rgb(var(--sys-color-error-container));
+    --el-tag-border-color: rgb(var(--sys-color-error));
+    --el-tag-hover-color: rgb(var(--sys-color-error));
+  }
+
+  &.el-tag--info {
+    --el-tag-text-color: rgb(var(--sys-color-neutral-80));
+    --el-tag-bg-color: rgb(var(--sys-color-surface-container));
+    --el-tag-border-color: rgb(var(--sys-color-outline));
+    --el-tag-hover-color: rgb(var(--sys-color-outline));
+  }
+}

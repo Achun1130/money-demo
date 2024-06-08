@@ -1,0 +1,17 @@
+#money .el-dialog {
+  --el-dialog-width: var(--dialog-width);
+  --el-dialog-padding-primary: var(--dialog-padding);
+  --el-dialog-border-radius: var(--dialog-border-radius);
+
+  &.dialog--lg {
+    max-width: var(--dialog-size-lg);
+  }
+
+  &.dialog--md {
+    max-width: var(--dialog-size-md);
+  }
+
+  &.dialog--sm {
+    max-width: var(--dialog-size-sm);
+  }
+}

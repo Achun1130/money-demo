@@ -1,10 +1,16 @@
 // abstracts
 @use './abstracts/variables/buttons' as abstracts-buttons;
 @use './abstracts/variables/form' as abstracts-form;
+@use './abstracts/variables/tags' as abstracts-tags;
+@use './abstracts/variables/table' as abstracts-table;
+@use './abstracts/variables/dialog' as abstracts-dialog;
 
 // base
 @use './base/themes';
 
 // vendors
-@use './vendors/element-plus/buttons' as vendors-element-plus-button;
+@use './vendors/element-plus/buttons' as vendors-element-plus-buttons;
 @use './vendors/element-plus/form' as vendors-element-plus-form;
+@use './vendors/element-plus//tags' as vendors-element-plus-tags;
+@use './vendors/element-plus//table' as vendors-element-plus-table;
+@use './vendors/element-plus//dialog' as vendors-element-plus-dialog;
