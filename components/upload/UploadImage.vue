@@ -1,0 +1,86 @@
+<script lang="ts" setup>
+defineProps({
+  url: {
+    type: String,
+    required: true,
+  },
+});
+
+defineEmits(['onClickDeleteBtn']);
+
+const uploadImageRef = ref<HTMLDivElement>();
+const active = ref(false);
+
+/**
+ * 切換 active
+ */
+function toggleActive(bool: boolean) {
+  active.value = bool;
+}
+
+useEventListener(document, 'click', (event: Event) => {
+  // 是否點擊到 uploadImageRef 元素（含子元素）
+  toggleActive(
+    !!(
+      uploadImageRef.value === event.target ||
+      uploadImageRef.value?.contains(event.target as HTMLElement)
+    ),
+  );
+});
+</script>
+
+<template>
+  <div
+    ref="uploadImageRef"
+    class="upload-image"
+    :style="{
+      backgroundImage: `url(${url})`,
+    }"
+    :class="{
+      active,
+    }"
+  >
+    <div class="upload-image__actions">
+      <!-- TODO: 顏色要調整 -->
+      <!-- TODO: 待處理_檢視圖片事件 -->
+      <!-- 檢視圖片按鈕 -->
+      <el-button
+        type="primary"
+        text
+        circle
+        :icon="ElIconZoomIn"
+        style="--button-circle-size: 1.5rem"
+      >
+      </el-button>
+      <!-- 檢視圖片按鈕 / -->
+
+      <!-- TODO: 顏色要調整 -->
+      <!-- 刪除圖片按鈕 -->
+      <el-button
+        type="primary"
+        text
+        circle
+        :icon="ElIconDelete"
+        style="--button-circle-size: 1.5rem"
+        @click="$emit('onClickDeleteBtn')"
+      >
+      </el-button>
+      <!-- 刪除圖片按鈕 / -->
+    </div>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+.upload-image {
+  @apply relative aspect-[205/162] flex-1 bg-cover bg-center bg-no-repeat;
+
+  .upload-image__actions {
+    @apply absolute bottom-0 left-0 right-0 top-0 -z-10 flex h-full items-center justify-center gap-1 bg-black/30 opacity-0 duration-100;
+  }
+
+  &.active .upload-image__actions,
+  &:hover .upload-image__actions {
+    @apply z-10 opacity-100;
+  }
+}
+</style>

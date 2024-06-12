@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const props = defineProps({
+defineProps({
   title: String,
   content: String,
 });
@@ -17,15 +17,15 @@ const props = defineProps({
     </div>
 
     <div>
-      <div v-if="props.title" class="text-title-l font-bold text-primary-10">
-        {{ props.title }}
+      <div v-if="title" class="text-title-l font-bold text-primary-10">
+        {{ title }}
       </div>
 
       <p
-        v-if="props.content"
+        v-if="content"
         class="mt-2 line-clamp-1 break-words text-button-l text-surface-on"
       >
-        {{ props.content }}
+        {{ content }}
       </p>
     </div>
   </div>

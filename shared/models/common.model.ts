@@ -13,3 +13,8 @@ export interface TagTypeOption {
   text: string;
   type: TagType;
 }
+
+export interface FormImage {
+  url: string;
+  [key: string]: any;
+}

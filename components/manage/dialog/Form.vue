@@ -20,7 +20,7 @@ defineProps({
 
 defineEmits(['onClosed', 'onClickLeftBtn', 'onClickRightBtn']);
 
-const visible = defineModel<boolean>('visible');
+const visible = defineModel<boolean>('visible', { required: true });
 </script>
 
 <template>
@@ -45,7 +45,7 @@ const visible = defineModel<boolean>('visible');
           circle
           :icon="ElIconClose"
           class="flex-shrink-0"
-          style="--button-circle-width: 2rem; --button-circle-height: 2rem"
+          style="--button-circle-size: 2rem"
         >
         </el-button>
       </div>

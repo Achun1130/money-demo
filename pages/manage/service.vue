@@ -150,7 +150,7 @@ function confirmFormDialog(formEl: FormInstance | undefined) {
  * 上傳檔案
  * TODO: 暫時使用 imgur API，等 API 出來再換掉
  */
-function uploadFile(uploadFile: UploadFile, uploadFiles: UploadFiles): void {
+function uploadFile(uploadFile: UploadFile): void {
   const file = uploadFile;
   const formData = new FormData();
 
@@ -165,8 +165,14 @@ function uploadFile(uploadFile: UploadFile, uploadFiles: UploadFiles): void {
       form.images?.push({
         url: res.data.link,
       });
-      console.log(form.images);
     });
+}
+
+/**
+ * 刪除檔案
+ */
+function deleteFile(index: number) {
+  form.images.splice(index, 1);
 }
 </script>
 
@@ -222,10 +228,7 @@ function uploadFile(uploadFile: UploadFile, uploadFiles: UploadFiles): void {
               text
               circle
               :icon="ElIconEditPen"
-              style="
-                --button-circle-width: 1.75rem;
-                --button-circle-height: 1.75rem;
-              "
+              style="--button-circle-size: 1.75rem"
               @click="openFormDialog('編輯服務項目')"
             >
             </el-button>
@@ -243,10 +246,7 @@ function uploadFile(uploadFile: UploadFile, uploadFiles: UploadFiles): void {
               text
               circle
               :icon="ElIconDeleteFilled"
-              style="
-                --button-circle-width: 1.75rem;
-                --button-circle-height: 1.75rem;
-              "
+              style="--button-circle-size: 1.75rem"
             >
             </el-button>
           </div>
@@ -287,29 +287,11 @@ function uploadFile(uploadFile: UploadFile, uploadFiles: UploadFiles): void {
       </el-form-item>
 
       <el-form-item label="圖片" prop="images">
-        <el-row :gutter="20" class="mb-4 w-full gap-y-5">
-          <el-col v-for="(image, index) in form.images" :key="index" :span="8">
-            <div
-              class="aspect-[205/162] flex-1 bg-cover bg-center bg-no-repeat"
-              :style="{
-                backgroundImage: `url(${image.url})`,
-              }"
-            ></div>
-          </el-col>
-        </el-row>
-
-        <el-upload
-          :show-file-list="false"
-          :auto-upload="false"
-          :on-change="uploadFile"
-        >
-          <el-button type="primary" round plain size="large">
-            <el-icon size="1.25rem" class="mr-2">
-              <el-icon-plus />
-            </el-icon>
-            新增檔案
-          </el-button>
-        </el-upload>
+        <Upload
+          :images="form.images"
+          @on-upload-image="uploadFile"
+          @on-delete-image="deleteFile"
+        />
       </el-form-item>
 
       <el-form-item label="排序" prop="sort">

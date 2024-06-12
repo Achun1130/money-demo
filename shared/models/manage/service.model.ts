@@ -1,4 +1,4 @@
-import type { TagTypeOption } from '../common.model';
+import type { FormImage, TagTypeOption } from '../common.model';
 
 /**
  * frontend enum
@@ -28,13 +28,8 @@ export interface FrontEndServiceItem {
 export interface FrontEndServiceForm {
   title: string | null;
   content: string | null;
-  images: FrontEndServiceFormImage[];
+  images: FormImage[];
   sort: number | null;
-}
-
-export interface FrontEndServiceFormImage {
-  id?: string;
-  url: string;
 }
 
 /**

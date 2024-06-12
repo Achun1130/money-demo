@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-const props = defineProps({
+defineProps({
   title: String,
   content: String,
   image: String,
 });
 
-const emit = defineEmits(['onClickBtn']);
+defineEmits(['onClickBtn']);
 </script>
 
 <template>
@@ -19,14 +19,14 @@ const emit = defineEmits(['onClickBtn']);
 
     <div class="p-5">
       <div class="text-headline-l font-bold text-surface-on">
-        {{ props.title }}
+        {{ title }}
       </div>
 
       <p
-        v-if="props.content"
+        v-if="content"
         class="mt-4 line-clamp-3 break-words text-content-l text-surface-on"
       >
-        {{ props.content }}
+        {{ content }}
       </p>
 
       <div class="text-right">
@@ -36,7 +36,7 @@ const emit = defineEmits(['onClickBtn']);
           plain
           size="small"
           class="mt-[1.875rem]"
-          @click="emit('onClickBtn')"
+          @click="$emit('onClickBtn')"
         >
           <el-icon size="1rem" class="mr-2">
             <el-icon-right />

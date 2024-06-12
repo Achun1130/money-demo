@@ -20,7 +20,7 @@ defineProps({
 
 defineEmits(['onClosed', 'onClickLeftBtn', 'onClickRightBtn']);
 
-const visible = defineModel<boolean>('visible');
+const visible = defineModel<boolean>('visible', { required: true });
 </script>
 
 <template>

@@ -1,17 +1,17 @@
 <script lang="ts" setup>
-const props = defineProps({
+defineProps({
   title: String,
   content: String,
 });
 
-const emit = defineEmits(['onClickBtn']);
+defineEmits(['onClickBtn']);
 </script>
 
 <template>
   <div class="flex flex-col gap-4 rounded-2xl p-5 shadow-card">
     <div class="flex">
       <div class="mr-auto text-headline-l font-bold text-surface-on">
-        {{ props.title }}
+        {{ title }}
       </div>
 
       <div class="flex h-12 items-center self-start">
@@ -22,7 +22,7 @@ const emit = defineEmits(['onClickBtn']);
             --button-padding-horizontal: 1rem;
             --button-padding-vertical: 0.75rem;
           "
-          @click="emit('onClickBtn')"
+          @click="$emit('onClickBtn')"
         >
           {{ $t('button.more') }}
           <el-icon size="1rem" class="ml-2">
@@ -33,10 +33,10 @@ const emit = defineEmits(['onClickBtn']);
     </div>
 
     <p
-      v-if="props.content"
+      v-if="content"
       class="line-clamp-3 break-words text-content-l text-surface-on"
     >
-      {{ props.content }}
+      {{ content }}
     </p>
   </div>
 </template>

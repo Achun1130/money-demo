@@ -107,8 +107,8 @@
   }
 
   &.is-circle {
-    width: var(--button-circle-width);
-    height: var(--button-circle-height);
+    width: var(--button-circle-size);
+    height: var(--button-circle-size);
     padding: var(--button-circle-padding-vertical)
       var(--button-circle-padding-horizontal);
     font-size: var(--button-circle-font-size);
