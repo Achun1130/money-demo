@@ -10,16 +10,25 @@ defineEmits(['onClickDeleteBtn']);
 
 const uploadImageRef = ref<HTMLDivElement>();
 const active = ref(false);
+const visible = ref(false);
 
 /**
  * 切換 active
  */
-function toggleActive(bool: boolean) {
+function toggleActive(bool: boolean): void {
   active.value = bool;
+}
+
+/**
+ * 點擊 預覽 按鈕
+ */
+function onClickPreviewBtn(): void {
+  visible.value = true;
 }
 
 useEventListener(document, 'click', (event: Event) => {
   // 是否點擊到 uploadImageRef 元素（含子元素）
+  // TODO: 優化 click outside or not
   toggleActive(
     !!(
       uploadImageRef.value === event.target ||
@@ -50,6 +59,7 @@ useEventListener(document, 'click', (event: Event) => {
         circle
         :icon="ElIconZoomIn"
         style="--button-circle-size: 1.5rem"
+        @click="onClickPreviewBtn"
       >
       </el-button>
       <!-- 檢視圖片按鈕 / -->
@@ -68,6 +78,12 @@ useEventListener(document, 'click', (event: Event) => {
       <!-- 刪除圖片按鈕 / -->
     </div>
   </div>
+
+  <client-only>
+    <el-dialog v-model="visible" align-center class="max-w-fit">
+      <img :src="url" alt="Preview Image" />
+    </el-dialog>
+  </client-only>
 </template>
 
 <style lang="scss" scoped>

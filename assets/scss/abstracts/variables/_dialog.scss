@@ -1,9 +1,12 @@
 :root {
-  --dialog-width: 95%;
+  --dialog-width: 100%;
   --dialog-padding: 0;
   --dialog-border-radius: 12px;
 
   --dialog-size-lg: 60rem;
   --dialog-size-md: 45rem;
   --dialog-size-sm: 30rem;
+
+  --overlay-dialog-padding-vertical: 1.5rem;
+  --overlay-dialog-padding-horizontal: 1.5rem;
 }

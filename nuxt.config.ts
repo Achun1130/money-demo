@@ -10,11 +10,27 @@ export default defineNuxtConfig({
           type: 'image/png',
           href: `${process.env.NODE_ENV === 'production' ? '/money-demo/' : '/'}favicon.png`,
         },
+        // material-icons from google icon
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/icon?family=Material+Icons',
+        },
+        // material-icons-outlined from google icon
+        {
+          rel: 'stylesheet',
+          href: 'https://fonts.googleapis.com/icon?family=Material+Icons+Outlined',
+        },
       ],
     },
     baseURL: process.env.NODE_ENV === 'production' ? '/money-demo/' : '/',
   },
-  modules: ['@element-plus/nuxt', '@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
+  modules: [
+    '@element-plus/nuxt',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/i18n',
+    '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
+  ],
   elementPlus: {
     /** Options */
     importStyle: 'scss',

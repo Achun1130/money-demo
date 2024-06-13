@@ -15,3 +15,8 @@
     max-width: var(--dialog-size-sm);
   }
 }
+
+#money .el-overlay-dialog {
+  padding: var(--overlay-dialog-padding-vertical)
+    var(--overlay-dialog-padding-horizontal);
+}

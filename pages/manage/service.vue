@@ -121,7 +121,7 @@ function toggleFormDialogVisible(visible: boolean): void {
 /**
  * 開啟 表單互動視窗
  */
-function openFormDialog(title: string) {
+function openFormDialog(title: string): void {
   formDialogOption.title = title;
   toggleFormDialogVisible(true);
 }
@@ -130,7 +130,7 @@ function openFormDialog(title: string) {
  * 關閉 表單互動視窗
  * @param formEl 表單元素
  */
-function closeFormDialog(formEl: FormInstance | undefined) {
+function closeFormDialog(formEl: FormInstance | undefined): void {
   resetForm(formEl);
   toggleFormDialogVisible(false);
 }
@@ -139,7 +139,7 @@ function closeFormDialog(formEl: FormInstance | undefined) {
  * 確認 表單互動視窗
  * @param formEl 表單元素
  */
-function confirmFormDialog(formEl: FormInstance | undefined) {
+function confirmFormDialog(formEl: FormInstance | undefined): void {
   submitForm(formEl, () => {
     toggleFormDialogVisible(false);
     console.log(toRaw(form).images);
@@ -171,7 +171,7 @@ function uploadFile(uploadFile: UploadFile): void {
 /**
  * 刪除檔案
  */
-function deleteFile(index: number) {
+function deleteFile(index: number): void {
   form.images.splice(index, 1);
 }
 </script>

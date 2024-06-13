@@ -31,6 +31,7 @@ const visible = defineModel<boolean>('visible', { required: true });
       :show-close="false"
       :class="dialogClass"
       @closed="$emit('onClosed')"
+      align-center
     >
       <template #header>
         <slot name="header"> </slot>

@@ -25,7 +25,7 @@ function uploadFile(uploadFile: UploadFile, uploadFiles: UploadFiles): void {
 /**
  * 刪除檔案
  */
-function deleteFile(index: number) {
+function deleteFile(index: number): void {
   emit('onDeleteImage', index);
 }
 </script>
