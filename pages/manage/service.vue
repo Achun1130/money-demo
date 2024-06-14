@@ -186,9 +186,7 @@ function deleteFile(index: number): void {
         size="large"
         @click="openFormDialog('新增服務項目')"
       >
-        <el-icon size="1.25rem" class="mr-2">
-          <el-icon-plus />
-        </el-icon>
+        <GoogleIcon class="mr-1"> add </GoogleIcon>
         新增服務項目
       </el-button>
     </div>
@@ -206,7 +204,8 @@ function deleteFile(index: number): void {
       <el-table-column
         label="上架狀態"
         width="104"
-        label-class-name="!text-center"
+        header-align="center"
+        class-name="table__cell--tag"
       >
         <template #default="scope">
           <div class="flex items-center justify-center">
@@ -219,7 +218,12 @@ function deleteFile(index: number): void {
       <!-- 上架狀態 / -->
 
       <!-- 編輯 -->
-      <el-table-column label="編輯" width="100" label-class-name="!text-center">
+      <el-table-column
+        label="編輯"
+        width="100"
+        header-align="center"
+        class-name="table__cell--btn"
+      >
         <template #default="scope">
           <!-- m-1 for button focus 狀態下，outline overflow 不被截斷 -->
           <div class="m-1 flex items-center justify-center">
@@ -227,10 +231,10 @@ function deleteFile(index: number): void {
               type="primary"
               text
               circle
-              :icon="ElIconEditPen"
               style="--button-circle-size: 1.75rem"
               @click="openFormDialog('編輯服務項目')"
             >
+              <GoogleIcon> edit </GoogleIcon>
             </el-button>
           </div>
         </template>
@@ -238,16 +242,21 @@ function deleteFile(index: number): void {
       <!-- 編輯 / -->
 
       <!-- 刪除 -->
-      <el-table-column label="刪除" width="100" label-class-name="!text-center">
+      <el-table-column
+        label="刪除"
+        width="100"
+        header-align="center"
+        class-name="table__cell--btn"
+      >
         <template #default="scope">
           <div class="m-1 flex items-center justify-center">
             <el-button
               type="primary"
               text
               circle
-              :icon="ElIconDeleteFilled"
               style="--button-circle-size: 1.75rem"
             >
+              <GoogleIcon> delete </GoogleIcon>
             </el-button>
           </div>
         </template>

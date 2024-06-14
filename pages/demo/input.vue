@@ -192,9 +192,12 @@ const resetBasicInputForm = (formEl: FormInstance | undefined) => {
               v-model="searchInputForm[key]"
               :placeholder="$t('input.keyword.placeholder')"
               :disabled="key === 'disabled'"
-              :prefix-icon="ElIconSearch"
               class="input--rounded"
-            />
+            >
+              <template #prefix>
+                <GoogleIcon>search</GoogleIcon>
+              </template>
+            </el-input>
           </div>
         </el-col>
       </el-row>

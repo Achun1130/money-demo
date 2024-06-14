@@ -9,6 +9,15 @@ export enum TagType {
   Info = 'info',
 }
 
+/**
+ * 1. Outlined: material-icons-outlined
+ * 2. Filled: material-icons
+ */
+export enum GoogleIconType {
+  Outlined = 'material-icons-outlined',
+  Filled = 'material-icons',
+}
+
 export interface TagTypeOption {
   text: string;
   type: TagType;

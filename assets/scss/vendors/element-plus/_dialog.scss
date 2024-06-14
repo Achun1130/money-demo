@@ -3,14 +3,17 @@
   --el-dialog-padding-primary: var(--dialog-padding);
   --el-dialog-border-radius: var(--dialog-border-radius);
 
+  // custom
   &.dialog--lg {
     max-width: var(--dialog-size-lg);
   }
 
+  // custom
   &.dialog--md {
     max-width: var(--dialog-size-md);
   }
 
+  // custom
   &.dialog--sm {
     max-width: var(--dialog-size-sm);
   }

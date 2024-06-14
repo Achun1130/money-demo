@@ -39,6 +39,7 @@
       font-size: var(--input-icon-font-size);
     }
 
+    // custom
     &.input--rounded {
       --el-input-border-radius: var(--input-border-radius-rounded);
 
@@ -52,6 +53,7 @@
       @apply shadow-input-focused;
     }
 
+    // custom
     textarea {
       padding: var(--textarea-padding-vertical)
         var(--textarea-padding-horizontal);

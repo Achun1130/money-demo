@@ -13,7 +13,7 @@
     --el-table-border-color: rgb(var(--sys-color-outline));
     --el-table-border: 1px solid var(--el-table-border-color);
 
-    font-weight: 700;
+    @apply font-bold;
   }
 
   .el-table__cell {
@@ -22,5 +22,16 @@
 
   .cell {
     padding: 0 var(--table-cell-padding-horizontal);
+  }
+
+  // custom
+  .table__cell {
+    &--tag {
+      @apply py-4;
+    }
+
+    &--btn {
+      @apply py-[1.125rem];
+    }
   }
 }

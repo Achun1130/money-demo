@@ -9,9 +9,8 @@
 
   height: var(--tag-height);
   padding: var(--tag-padding-vertical) var(--tag-padding-horizontal);
-  font-weight: 700;
 
-  @apply text-button-m;
+  @apply text-button-m font-bold;
 
   .el-icon {
     padding: var(--tag-icon-padding-vertical) var(--tag-icon-padding-horizontal);

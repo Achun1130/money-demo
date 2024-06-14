@@ -25,9 +25,7 @@ defineEmits(['onClickBtn']);
           @click="$emit('onClickBtn')"
         >
           {{ $t('button.more') }}
-          <el-icon size="1rem" class="ml-2">
-            <el-icon-arrow-right-bold />
-          </el-icon>
+          <GoogleIcon class="ml-1"> keyboard_arrow_right </GoogleIcon>
         </el-button>
       </div>
     </div>

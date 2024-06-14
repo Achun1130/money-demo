@@ -2,7 +2,8 @@
   height: var(--button-height);
   font-size: var(--button-font-size);
   padding: var(--button-padding-vertical) var(--button-padding-horizontal);
-  font-weight: 700;
+
+  @apply font-bold;
 
   &:hover {
     @apply shadow-button-hover;

@@ -57,10 +57,10 @@ useEventListener(document, 'click', (event: Event) => {
         type="primary"
         text
         circle
-        :icon="ElIconZoomIn"
         style="--button-circle-size: 1.5rem"
         @click="onClickPreviewBtn"
       >
+        <GoogleIcon> zoom_in </GoogleIcon>
       </el-button>
       <!-- 檢視圖片按鈕 / -->
 
@@ -70,10 +70,10 @@ useEventListener(document, 'click', (event: Event) => {
         type="primary"
         text
         circle
-        :icon="ElIconDelete"
         style="--button-circle-size: 1.5rem"
         @click="$emit('onClickDeleteBtn')"
       >
+        <GoogleIcon> delete </GoogleIcon>
       </el-button>
       <!-- 刪除圖片按鈕 / -->
     </div>

@@ -34,13 +34,11 @@ defineEmits(['onClickBtn']);
           type="primary"
           round
           plain
-          size="small"
+          size="large"
           class="mt-[1.875rem]"
           @click="$emit('onClickBtn')"
         >
-          <el-icon size="1rem" class="mr-2">
-            <el-icon-right />
-          </el-icon>
+          <GoogleIcon class="mr-1"> arrow_forward </GoogleIcon>
           {{ $t('button.info') }}
         </el-button>
       </div>

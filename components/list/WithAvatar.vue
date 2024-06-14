@@ -8,12 +8,10 @@ defineProps({
 <template>
   <div class="flex gap-4 border-b border-b-black/20 pb-6">
     <div
-      class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary-container text-primary-on-container"
+      class="flex h-10 w-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-full bg-primary-container text-primary-on-container"
       v-if="$slots.icon"
     >
-      <div class="h-8 w-8">
-        <slot name="icon"></slot>
-      </div>
+      <slot name="icon"></slot>
     </div>
 
     <div>

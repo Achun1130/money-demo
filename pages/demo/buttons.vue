@@ -32,11 +32,10 @@ definePageMeta({
         <el-col :span="6">
           <div class="box">
             <el-button type="primary" round size="large">
-              <!-- 不使用 el-button 中的 icon，使用 el-icon 比較好控制 size & margin -->
-              <el-icon size="1.25rem" class="mr-2">
-                <el-icon-user-filled />
-              </el-icon>
+              <!-- 不使用 el-button 中的 icon，使用 slot 比較好控制 size & margin -->
+              <GoogleIcon class="mr-1"> person </GoogleIcon>
               {{ $t('button.login') }}
+              <GoogleIcon class="ml-1"> expand_more </GoogleIcon>
             </el-button>
           </div>
         </el-col>
@@ -45,10 +44,9 @@ definePageMeta({
         <el-col :span="6">
           <div class="box">
             <el-button type="primary" round size="large">
-              <el-icon size="1.25rem" class="mr-2">
-                <el-icon-user-filled />
-              </el-icon>
+              <GoogleIcon class="mr-1"> person </GoogleIcon>
               {{ $t('button.login') }}
+              <GoogleIcon class="ml-1"> expand_more </GoogleIcon>
             </el-button>
           </div>
         </el-col>
@@ -57,10 +55,9 @@ definePageMeta({
         <el-col :span="6">
           <div class="box">
             <el-button type="primary" round size="large" disabled>
-              <el-icon size="1.25rem" class="mr-2">
-                <el-icon-user-filled />
-              </el-icon>
+              <GoogleIcon class="mr-1"> person </GoogleIcon>
               {{ $t('button.login') }}
+              <GoogleIcon class="ml-1"> expand_more </GoogleIcon>
             </el-button>
           </div>
         </el-col>
@@ -74,10 +71,9 @@ definePageMeta({
         <el-col :span="6">
           <div class="box">
             <el-button type="primary" round>
-              <el-icon size="1.25rem" class="mr-2">
-                <el-icon-user-filled />
-              </el-icon>
+              <GoogleIcon class="mr-1"> person </GoogleIcon>
               {{ $t('button.login') }}
+              <GoogleIcon class="ml-1"> expand_more </GoogleIcon>
             </el-button>
           </div>
         </el-col>
@@ -86,10 +82,9 @@ definePageMeta({
         <el-col :span="6">
           <div class="box">
             <el-button type="primary" round>
-              <el-icon size="1.25rem" class="mr-2">
-                <el-icon-user-filled />
-              </el-icon>
+              <GoogleIcon class="mr-1"> person </GoogleIcon>
               {{ $t('button.login') }}
+              <GoogleIcon class="ml-1"> expand_more </GoogleIcon>
             </el-button>
           </div>
         </el-col>
@@ -98,10 +93,9 @@ definePageMeta({
         <el-col :span="6">
           <div class="box">
             <el-button type="primary" round disabled>
-              <el-icon size="1.25rem" class="mr-2">
-                <el-icon-user-filled />
-              </el-icon>
+              <GoogleIcon class="mr-1"> person </GoogleIcon>
               {{ $t('button.login') }}
+              <GoogleIcon class="ml-1"> expand_more </GoogleIcon>
             </el-button>
           </div>
         </el-col>
@@ -115,10 +109,13 @@ definePageMeta({
         <el-col :span="6">
           <div class="box">
             <el-button type="primary" round size="small">
-              <el-icon size="1rem" class="mr-2">
-                <el-icon-user-filled />
-              </el-icon>
+              <GoogleIcon icon-size="1.375rem" class="mr-1">
+                person
+              </GoogleIcon>
               {{ $t('button.login') }}
+              <GoogleIcon icon-size="1.375rem" class="ml-1">
+                expand_more
+              </GoogleIcon>
             </el-button>
           </div>
         </el-col>
@@ -127,10 +124,13 @@ definePageMeta({
         <el-col :span="6">
           <div class="box">
             <el-button type="primary" round size="small">
-              <el-icon size="1rem" class="mr-2">
-                <el-icon-user-filled />
-              </el-icon>
+              <GoogleIcon icon-size="1.375rem" class="mr-1">
+                person
+              </GoogleIcon>
               {{ $t('button.login') }}
+              <GoogleIcon icon-size="1.375rem" class="ml-1">
+                expand_more
+              </GoogleIcon>
             </el-button>
           </div>
         </el-col>
@@ -139,10 +139,13 @@ definePageMeta({
         <el-col :span="6">
           <div class="box">
             <el-button type="primary" round size="small" disabled>
-              <el-icon size="1rem" class="mr-2">
-                <el-icon-user-filled />
-              </el-icon>
+              <GoogleIcon icon-size="1.375rem" class="mr-1">
+                person
+              </GoogleIcon>
               {{ $t('button.login') }}
+              <GoogleIcon icon-size="1.375rem" class="ml-1">
+                expand_more
+              </GoogleIcon>
             </el-button>
           </div>
         </el-col>
@@ -159,10 +162,8 @@ definePageMeta({
         <el-col :span="6">
           <div class="box">
             <el-button type="primary" round plain size="large">
-              <!-- 不使用 el-button 中的 icon，使用 el-icon 比較好控制 size & margin -->
-              <el-icon size="1.25rem" class="mr-2">
-                <el-icon-right />
-              </el-icon>
+              <!-- 不使用 el-button 中的 icon，使用 slot 比較好控制 size & margin -->
+              <GoogleIcon class="mr-1"> arrow_forward </GoogleIcon>
               {{ $t('button.info') }}
             </el-button>
           </div>
@@ -172,9 +173,7 @@ definePageMeta({
         <el-col :span="6">
           <div class="box">
             <el-button type="primary" round plain size="large">
-              <el-icon size="1.25rem" class="mr-2">
-                <el-icon-right />
-              </el-icon>
+              <GoogleIcon class="mr-1"> arrow_forward </GoogleIcon>
               {{ $t('button.info') }}
             </el-button>
           </div>
@@ -184,9 +183,7 @@ definePageMeta({
         <el-col :span="6">
           <div class="box">
             <el-button type="primary" round plain size="large" disabled>
-              <el-icon size="1.25rem" class="mr-2">
-                <el-icon-right />
-              </el-icon>
+              <GoogleIcon class="mr-1"> arrow_forward </GoogleIcon>
               {{ $t('button.info') }}
             </el-button>
           </div>
@@ -201,9 +198,7 @@ definePageMeta({
         <el-col :span="6">
           <div class="box">
             <el-button type="primary" round plain>
-              <el-icon size="1.25rem" class="mr-2">
-                <el-icon-right />
-              </el-icon>
+              <GoogleIcon class="mr-1"> arrow_forward </GoogleIcon>
               {{ $t('button.info') }}
             </el-button>
           </div>
@@ -213,9 +208,7 @@ definePageMeta({
         <el-col :span="6">
           <div class="box">
             <el-button type="primary" round plain>
-              <el-icon size="1.25rem" class="mr-2">
-                <el-icon-right />
-              </el-icon>
+              <GoogleIcon class="mr-1"> arrow_forward </GoogleIcon>
               {{ $t('button.info') }}
             </el-button>
           </div>
@@ -225,9 +218,7 @@ definePageMeta({
         <el-col :span="6">
           <div class="box">
             <el-button type="primary" round plain disabled>
-              <el-icon size="1.25rem" class="mr-2">
-                <el-icon-right />
-              </el-icon>
+              <GoogleIcon class="mr-1"> arrow_forward </GoogleIcon>
               {{ $t('button.info') }}
             </el-button>
           </div>
@@ -242,9 +233,9 @@ definePageMeta({
         <el-col :span="6">
           <div class="box">
             <el-button type="primary" round plain size="small">
-              <el-icon size="1rem" class="mr-2">
-                <el-icon-right />
-              </el-icon>
+              <GoogleIcon icon-size="1.375rem" class="mr-1">
+                arrow_forward
+              </GoogleIcon>
               {{ $t('button.info') }}
             </el-button>
           </div>
@@ -254,9 +245,9 @@ definePageMeta({
         <el-col :span="6">
           <div class="box">
             <el-button type="primary" round plain size="small">
-              <el-icon size="1rem" class="mr-2">
-                <el-icon-right />
-              </el-icon>
+              <GoogleIcon icon-size="1.375rem" class="mr-1">
+                arrow_forward
+              </GoogleIcon>
               {{ $t('button.info') }}
             </el-button>
           </div>
@@ -266,9 +257,9 @@ definePageMeta({
         <el-col :span="6">
           <div class="box">
             <el-button type="primary" round plain size="small" disabled>
-              <el-icon size="1rem" class="mr-2">
-                <el-icon-right />
-              </el-icon>
+              <GoogleIcon icon-size="1.375rem" class="mr-1">
+                arrow_forward
+              </GoogleIcon>
               {{ $t('button.info') }}
             </el-button>
           </div>
@@ -295,10 +286,8 @@ definePageMeta({
           <div class="box">
             <el-button type="primary" text>
               {{ $t('button.more') }}
-              <!-- 不使用 el-button 中的 icon，使用 el-icon 比較好控制 size & margin -->
-              <el-icon size="1rem" class="ml-2">
-                <el-icon-arrow-right-bold />
-              </el-icon>
+              <!-- 不使用 el-button 中的 icon，使用 slot 比較好控制 size & margin -->
+              <GoogleIcon class="ml-1"> keyboard_arrow_right </GoogleIcon>
             </el-button>
           </div>
         </el-col>
@@ -308,10 +297,8 @@ definePageMeta({
           <div class="box">
             <el-button type="primary" text>
               {{ $t('button.more') }}
-              <!-- 不使用 el-button 中的 icon，使用 el-icon 比較好控制 size & margin -->
-              <el-icon size="1rem" class="ml-2">
-                <el-icon-arrow-right-bold />
-              </el-icon>
+              <!-- 不使用 el-button 中的 icon，使用 slot 比較好控制 size & margin -->
+              <GoogleIcon class="ml-1"> keyboard_arrow_right </GoogleIcon>
             </el-button>
           </div>
         </el-col>
@@ -321,10 +308,8 @@ definePageMeta({
           <div class="box">
             <el-button type="primary" text disabled>
               {{ $t('button.more') }}
-              <!-- 不使用 el-button 中的 icon，使用 el-icon 比較好控制 size & margin -->
-              <el-icon size="1rem" class="ml-2">
-                <el-icon-arrow-right-bold />
-              </el-icon>
+              <!-- 不使用 el-button 中的 icon，使用 slot 比較好控制 size & margin -->
+              <GoogleIcon class="ml-1"> keyboard_arrow_right </GoogleIcon>
             </el-button>
           </div>
         </el-col>
@@ -348,21 +333,26 @@ definePageMeta({
         <!-- Icon Button default -->
         <el-col :span="6" :offset="6">
           <div class="box">
-            <el-button type="primary" circle :icon="ElIconSearch"> </el-button>
+            <el-button type="primary" circle>
+              <GoogleIcon>search</GoogleIcon>
+            </el-button>
           </div>
         </el-col>
 
         <!-- Icon Button hover -->
         <el-col :span="6">
           <div class="box">
-            <el-button type="primary" circle :icon="ElIconSearch"> </el-button>
+            <el-button type="primary" circle>
+              <GoogleIcon>search</GoogleIcon>
+            </el-button>
           </div>
         </el-col>
 
         <!-- Icon Button disabled -->
         <el-col :span="6">
           <div class="box">
-            <el-button type="primary" circle :icon="ElIconSearch" disabled>
+            <el-button type="primary" circle disabled>
+              <GoogleIcon>search</GoogleIcon>
             </el-button>
           </div>
         </el-col>

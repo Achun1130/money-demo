@@ -43,10 +43,10 @@ const visible = defineModel<boolean>('visible', { required: true });
           type="primary"
           text
           circle
-          :icon="ElIconClose"
           class="flex-shrink-0"
           style="--button-circle-size: 2rem"
         >
+          <GoogleIcon> close </GoogleIcon>
         </el-button>
       </div>
     </template>

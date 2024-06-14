@@ -43,7 +43,9 @@ function onClickBtn(text: string): void {
             content="列表文字列表文字列表文字列表文字列表文字列表文字列表文字列"
           >
             <template #icon>
-              <el-icon-user></el-icon-user>
+              <GoogleIcon icon-size="3rem" class="mt-4">
+                person_outline
+              </GoogleIcon>
             </template>
           </ListWithAvatar>
         </el-col>

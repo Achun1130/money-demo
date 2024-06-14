@@ -46,19 +46,19 @@ function uploadFile(uploadFile: UploadFile, uploadFiles: UploadFiles): void {
       <img
         v-if="imageUrl"
         :src="imageUrl"
-        class="avatar"
+        class="avatar-uploader-avatar"
         referrerpolicy="no-referrer"
       />
-      <el-icon v-else class="avatar-uploader-icon">
-        <el-icon-plus />
-      </el-icon>
+      <div v-else class="avatar-uploader-container">
+        <GoogleIcon class="avatar-uploader-icon"> add </GoogleIcon>
+      </div>
     </el-upload>
   </div>
 </template>
 
 <style lang="scss">
 .avatar-uploader {
-  .avatar {
+  .avatar-uploader-avatar {
     width: 178px;
     height: 178px;
     display: block;
@@ -77,12 +77,17 @@ function uploadFile(uploadFile: UploadFile, uploadFiles: UploadFiles): void {
     }
   }
 
-  .el-icon.avatar-uploader-icon {
-    font-size: 28px;
+  .avatar-uploader-container {
     color: #8c939d;
     width: 178px;
     height: 178px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .avatar-uploader-icon {
+    font-size: 28px;
   }
 }
 </style>

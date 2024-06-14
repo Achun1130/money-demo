@@ -13,11 +13,17 @@ defineEmits(['onClickBtn']);
     <div class="flex items-center gap-4">
       <span class="mr-auto text-title-m font-bold">{{ date }}</span>
 
-      <el-button type="primary" text @click="$emit('onClickBtn')">
+      <el-button
+        type="primary"
+        text
+        style="
+          --button-padding-horizontal: 1rem;
+          --button-padding-vertical: 0.75rem;
+        "
+        @click="$emit('onClickBtn')"
+      >
         {{ $t('button.more') }}
-        <el-icon size="1rem" class="ml-2">
-          <el-icon-arrow-right-bold />
-        </el-icon>
+        <GoogleIcon class="ml-1"> keyboard_arrow_right </GoogleIcon>
       </el-button>
     </div>
 
