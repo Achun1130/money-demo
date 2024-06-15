@@ -195,7 +195,7 @@ const resetBasicInputForm = (formEl: FormInstance | undefined) => {
               class="input--rounded"
             >
               <template #prefix>
-                <GoogleIcon>search</GoogleIcon>
+                <icon-google>search</icon-google>
               </template>
             </el-input>
           </div>

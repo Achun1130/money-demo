@@ -1,0 +1,81 @@
+#money {
+  // 第一層選單
+  .el-menu {
+    --el-menu-bg-color: rgb(var(--sys-color-primary-container));
+    --el-menu-item-height: var(--menu-item-height);
+    --el-menu-item-font-size: var(--menu-item-font-size);
+    --el-menu-text-color: rgb(var(--sys-color-on-surface));
+    --el-menu-base-level-padding: var(--menu-base-level-padding);
+    --el-menu-hover-bg-color: rgb(var(--sys-color-primary-container));
+    --el-menu-active-color: rgb(var(--sys-color-primary-100));
+    --el-menu-sub-item-height: var(--menu-sub-item-height);
+    --el-menu-level: 0 !important;
+
+    @apply border-none;
+
+    // custom
+    &.menu--no-group-title .el-menu-item-group__title {
+      @apply hidden;
+    }
+  }
+
+  // 第一層選單
+  .el-menu-item {
+    @apply border-b border-primary-on;
+
+    &:hover {
+      --el-menu-text-color: rgb(var(--sys-color-on-primary-container));
+    }
+
+    &.is-active {
+      @apply bg-primary;
+    }
+  }
+
+  // 第一層選單
+  .el-sub-menu {
+    @apply border-b border-primary-on;
+
+    &:hover {
+      --el-menu-text-color: rgb(var(--sys-color-on-primary-container));
+    }
+
+    &.is-opened {
+      --el-menu-hover-bg-color: rgb(var(--sys-color-primary));
+      --el-menu-text-color: rgb(var(--sys-color-primary-100));
+
+      @apply border-none bg-primary;
+
+      .el-sub-menu__title:hover {
+        --el-menu-text-color: rgb(var(--sys-color-primary-100));
+      }
+    }
+  }
+
+  .el-sub-menu__title {
+    // --el-menu-icon-width
+    // padding-right: calc(
+    //   var(--el-menu-base-level-padding) + var(--el-menu-icon-width)
+    // );
+  }
+
+  // 第二層選單
+  .el-sub-menu .el-menu {
+    --el-menu-bg-color: rgb(var(--sys-color-primary-100));
+    --el-menu-text-color: rgb(var(--sys-color-on-surface));
+    --el-menu-hover-bg-color: rgb(var(--sys-color-primary-100));
+    --el-menu-active-color: rgb(var(--sys-color-primary));
+
+    .el-menu-item {
+      @apply border-b border-outline-variant;
+
+      &:hover {
+        --el-menu-text-color: rgb(var(--sys-color-primary));
+      }
+
+      &.is-active {
+        @apply bg-primary-on;
+      }
+    }
+  }
+}

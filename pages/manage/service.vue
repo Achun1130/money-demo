@@ -16,6 +16,7 @@ import { resetForm, sortValidator, submitForm } from '~/shared/utils/form-util';
 
 definePageMeta({
   layout: 'manage',
+  name: '服務項目列表',
 });
 
 const { t } = useI18n();
@@ -38,8 +39,8 @@ const tableData = reactive<FrontEndServiceItem[]>([
     name: '很長很長的項目名稱很長很長的項目名稱很長很長的項目名稱很長很長的項目名稱很長很長的項目名稱很長',
     status: FrontEndServiceItemStatusType.Ing,
     tag: {
-      text: '上架中',
-      type: TagType.Danger,
+      text: '已下架',
+      type: TagType.Info,
     },
   },
   {
@@ -48,7 +49,16 @@ const tableData = reactive<FrontEndServiceItem[]>([
     status: FrontEndServiceItemStatusType.Ing,
     tag: {
       text: '已上架',
-      type: TagType.Danger,
+      type: TagType.Success,
+    },
+  },
+  {
+    id: '4',
+    name: '超級SPA',
+    status: FrontEndServiceItemStatusType.Off,
+    tag: {
+      text: '已下架',
+      type: TagType.Info,
     },
   },
   {
@@ -177,19 +187,17 @@ function deleteFile(index: number): void {
 </script>
 
 <template>
-  <div class="my-10">
-    <!-- 新增服務項目 -->
-    <div class="mb-6 text-right">
-      <el-button
-        type="primary"
-        round
-        size="large"
-        @click="openFormDialog('新增服務項目')"
-      >
-        <GoogleIcon class="mr-1"> add </GoogleIcon>
-        新增服務項目
-      </el-button>
-    </div>
+  <!-- 新增服務項目 -->
+  <div class="mb-8">
+    <el-button
+      type="primary"
+      round
+      size="large"
+      @click="openFormDialog('新增服務項目')"
+    >
+      <icon-google class="mr-1"> add </icon-google>
+      新增服務項目
+    </el-button>
   </div>
   <!-- 新增服務項目 / -->
 
@@ -234,7 +242,7 @@ function deleteFile(index: number): void {
               style="--button-circle-size: 1.75rem"
               @click="openFormDialog('編輯服務項目')"
             >
-              <GoogleIcon> edit </GoogleIcon>
+              <icon-google> edit </icon-google>
             </el-button>
           </div>
         </template>
@@ -256,7 +264,7 @@ function deleteFile(index: number): void {
               circle
               style="--button-circle-size: 1.75rem"
             >
-              <GoogleIcon> delete </GoogleIcon>
+              <icon-google> delete </icon-google>
             </el-button>
           </div>
         </template>

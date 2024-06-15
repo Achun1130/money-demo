@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import type { PropType } from 'vue';
-import { GoogleIconType } from '~/shared/models/common.model';
+import { IconGoogleType } from '~/shared/models/common.model';
 
 defineProps({
   iconType: {
-    type: String as PropType<GoogleIconType>,
-    default: GoogleIconType.Filled,
+    type: String as PropType<IconGoogleType>,
+    default: IconGoogleType.Filled,
   },
   iconSize: {
     type: String,

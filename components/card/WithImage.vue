@@ -38,7 +38,7 @@ defineEmits(['onClickBtn']);
           class="mt-[1.875rem]"
           @click="$emit('onClickBtn')"
         >
-          <GoogleIcon class="mr-1"> arrow_forward </GoogleIcon>
+          <icon-google class="mr-1"> arrow_forward </icon-google>
           {{ $t('button.info') }}
         </el-button>
       </div>

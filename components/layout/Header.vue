@@ -1,5 +1,14 @@
+<script lang="ts" setup>
+defineProps({
+  element: {
+    type: String,
+    default: 'header',
+  },
+});
+</script>
+
 <template>
-  <header class="mx-auto max-w-[90rem] px-14">
+  <component :is="element" class="mx-auto max-w-[90rem] px-14">
     <slot />
-  </header>
+  </component>
 </template>

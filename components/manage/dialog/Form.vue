@@ -46,7 +46,7 @@ const visible = defineModel<boolean>('visible', { required: true });
           class="flex-shrink-0"
           style="--button-circle-size: 2rem"
         >
-          <GoogleIcon> close </GoogleIcon>
+          <icon-google> close </icon-google>
         </el-button>
       </div>
     </template>

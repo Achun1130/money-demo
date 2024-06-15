@@ -50,7 +50,7 @@ function uploadFile(uploadFile: UploadFile, uploadFiles: UploadFiles): void {
         referrerpolicy="no-referrer"
       />
       <div v-else class="avatar-uploader-container">
-        <GoogleIcon class="avatar-uploader-icon"> add </GoogleIcon>
+        <icon-google class="avatar-uploader-icon"> add </icon-google>
       </div>
     </el-upload>
   </div>

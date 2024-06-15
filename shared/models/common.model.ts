@@ -13,7 +13,7 @@ export enum TagType {
  * 1. Outlined: material-icons-outlined
  * 2. Filled: material-icons
  */
-export enum GoogleIconType {
+export enum IconGoogleType {
   Outlined = 'material-icons-outlined',
   Filled = 'material-icons',
 }

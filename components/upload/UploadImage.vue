@@ -60,7 +60,7 @@ useEventListener(document, 'click', (event: Event) => {
         style="--button-circle-size: 1.5rem"
         @click="onClickPreviewBtn"
       >
-        <GoogleIcon> zoom_in </GoogleIcon>
+        <icon-google> zoom_in </icon-google>
       </el-button>
       <!-- 檢視圖片按鈕 / -->
 
@@ -73,7 +73,7 @@ useEventListener(document, 'click', (event: Event) => {
         style="--button-circle-size: 1.5rem"
         @click="$emit('onClickDeleteBtn')"
       >
-        <GoogleIcon> delete </GoogleIcon>
+        <icon-google> delete </icon-google>
       </el-button>
       <!-- 刪除圖片按鈕 / -->
     </div>

@@ -43,7 +43,7 @@ function deleteFile(index: number): void {
     :on-change="uploadFile"
   >
     <el-button type="primary" round plain size="large">
-      <GoogleIcon class="mr-1"> add </GoogleIcon>
+      <icon-google class="mr-1"> add </icon-google>
       {{ uploadBtnText }}
     </el-button>
   </el-upload>
