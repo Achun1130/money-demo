@@ -114,4 +114,8 @@
       var(--button-circle-padding-horizontal);
     font-size: var(--button-circle-font-size);
   }
+
+  & + .el-button {
+    margin-left: var(--button-gap);
+  }
 }

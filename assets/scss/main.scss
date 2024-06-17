@@ -9,6 +9,9 @@
 // base
 @use './base/themes';
 
+// layout
+@use './layout/common';
+
 // vendors
 @use './vendors/element-plus/buttons' as vendors-element-plus-buttons;
 @use './vendors/element-plus/form' as vendors-element-plus-form;

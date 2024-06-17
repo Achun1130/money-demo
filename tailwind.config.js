@@ -176,6 +176,8 @@ export default {
       card: '0 0 12px 0 rgba(0, 0, 0, 0.1)',
       'button-hover': '0 0 6px 0 rgba(0, 0, 0, 0.2)',
       'input-focused': '0 0 10px 0 rgba(var(--sys-color-primary-40), 0.2)',
+      // TODO: 暫時命名為 header，目前只使用在 header 上
+      header: '0 2px 10px 0 rgba(0, 0, 0, 0.16)',
     },
   },
   plugins: [],

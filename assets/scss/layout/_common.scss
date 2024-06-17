@@ -1,0 +1,15 @@
+.common-layout {
+  @apply flex h-dvh flex-col;
+
+  &__header {
+    @apply relative w-full;
+
+    &:after {
+      @apply shadow-header pointer-events-none absolute bottom-0 left-0 right-0 top-0 content-[''];
+    }
+  }
+
+  &__content {
+    @apply flex w-full flex-1 flex-col;
+  }
+}
