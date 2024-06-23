@@ -2,7 +2,7 @@
 
 <template>
   <div class="flex items-center gap-[3.75rem] py-5">
-    <h1>
+    <h1 class="flex-shrink-0">
       <!-- TODO: LOGO 之後需要替換 -->
       <div
         class="flex h-[2.25rem] w-[5.8125rem] items-center justify-center bg-inverse-on-surface text-headline-s font-bold leading-[2.25rem] text-black"
@@ -11,7 +11,7 @@
       </div>
     </h1>
 
-    <div class="ml-auto" style="--button-gap: 1.25rem">
+    <div class="ml-auto flex-shrink-0" style="--button-gap: 1.25rem">
       <el-button type="primary" circle>
         <icon-google>notifications</icon-google>
       </el-button>

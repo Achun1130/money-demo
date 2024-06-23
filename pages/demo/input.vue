@@ -162,11 +162,9 @@ const resetBasicInputForm = (formEl: FormInstance | undefined) => {
                 :label="$t('input.confirm_password.label')"
                 :prop="key"
               >
-                <!-- 目前 input password 眼睛切換的 icon， 是使用 element plus 提供的方式，但在沒有值 / disabled 的狀態下會消失，之後有時間再把 input password 弄成元件改善這個問題 -->
-                <el-input
-                  v-model="basicInputForm[key]"
+                <form-input-password
+                  v-model:password="basicInputForm[key] as string"
                   :placeholder="$t('input.confirm_password.placeholder')"
-                  show-password
                   :disabled="key === 'disabled'"
                 />
               </el-form-item>
@@ -216,12 +214,9 @@ const resetBasicInputForm = (formEl: FormInstance | undefined) => {
           <el-col :span="6" :offset="6">
             <div class="box pt-[1.125rem]">
               <el-form-item :label="$t('input.content.label')" prop="textarea">
-                <el-input
-                  v-model="textareaForm.textarea"
+                <form-textarea
+                  v-model:textarea="textareaForm.textarea"
                   :placeholder="$t('input.content.placeholder')"
-                  type="textarea"
-                  :autosize="{ minRows: 3, maxRows: 6 }"
-                  resize="none"
                 />
               </el-form-item>
             </div>

@@ -294,12 +294,9 @@ function deleteFile(index: number): void {
       </el-form-item>
 
       <el-form-item label="內文" prop="content">
-        <el-input
-          v-model="form.content"
+        <form-textarea
+          v-model:textarea="form.content"
           placeholder="請輸入內文"
-          type="textarea"
-          :autosize="{ minRows: 3, maxRows: 6 }"
-          resize="none"
         />
       </el-form-item>
 
