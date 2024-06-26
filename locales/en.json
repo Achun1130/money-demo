@@ -54,5 +54,11 @@
     },
     "submit": "submit",
     "reset": "reset"
+  },
+  "form": {
+    "type": {
+      "add": "add",
+      "edit": "edit"
+    }
   }
 }

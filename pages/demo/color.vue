@@ -357,14 +357,14 @@ const othersLightTheme: lightTheme = {
     <div class="flex flex-col gap-5">
       <el-row :gutter="4" class="gap-y-5">
         <el-col
-          :span="8"
           v-for="(themeVal, theme) in typesLightTheme"
           :key="theme"
+          :span="8"
         >
           <div
             v-for="(val, i) in themeVal"
             :key="i"
-            class="flex h-10 items-center justify-between p-3 text-label-m font-medium"
+            class="text-label-m flex h-10 items-center justify-between p-3 font-medium"
             :class="val.class"
           >
             <span class="capitalize">{{ val.title }}</span>
@@ -381,7 +381,7 @@ const othersLightTheme: lightTheme = {
         <div
           v-for="(val, i) in themeVal"
           :key="i"
-          class="flex h-10 flex-1 items-center justify-between p-3 text-label-m font-medium"
+          class="text-label-m flex h-10 flex-1 items-center justify-between p-3 font-medium"
           :class="val.class"
         >
           <span class="capitalize">{{ val.title }}</span>

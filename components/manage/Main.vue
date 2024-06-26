@@ -10,6 +10,6 @@ const route = useRoute();
   </div>
 
   <div class="p-8">
-    <slot />
+    <slot></slot>
   </div>
 </template>

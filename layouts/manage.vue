@@ -1,10 +1,8 @@
 <template>
   <div class="common-layout bg-primary-99">
-    <div
-      class="common-layout__header bg-white"
-    >
+    <div class="common-layout__header bg-white">
       <layout-header>
-        <manage-header></manage-header>
+        <ManageHeader />
       </layout-header>
     </div>
 
@@ -20,7 +18,7 @@
 
           <main class="flex-1 bg-white">
             <manage-main>
-              <slot />
+              <slot></slot>
             </manage-main>
           </main>
         </div>

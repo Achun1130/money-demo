@@ -47,9 +47,9 @@ watch(
               <!-- 第二層選單 -->
               <el-menu-item-group>
                 <el-menu-item
-                  :index="child.path"
                   v-for="child in parent.children"
                   :key="child.name"
+                  :index="child.path"
                   @click="navigateTo({ path: child.path })"
                 >
                   <icon-google class="mr-4">{{ child.icon }}</icon-google>

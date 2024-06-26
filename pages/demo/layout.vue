@@ -15,7 +15,7 @@ definePageMeta({
         </div>
 
         <el-row :gutter="20">
-          <el-col :span="2" v-for="(item, i) in 12" :key="i" class="">
+          <el-col v-for="(item, i) in 12" :key="i" :span="2">
             <div class="h-24 bg-primary-90"></div>
           </el-col>
         </el-row>
@@ -39,7 +39,7 @@ definePageMeta({
         </div>
 
         <el-row :gutter="20">
-          <el-col :span="2" v-for="(item, i) in 12" :key="i" class="">
+          <el-col v-for="(item, i) in 12" :key="i" :span="2">
             <div class="h-[37.5rem] bg-primary-90"></div>
           </el-col>
         </el-row>

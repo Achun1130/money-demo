@@ -9,6 +9,6 @@ defineProps({
 
 <template>
   <component :is="element" class="mx-auto max-w-[90rem] px-14">
-    <slot />
+    <slot></slot>
   </component>
 </template>

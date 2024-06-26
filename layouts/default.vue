@@ -1,7 +1,7 @@
 <template>
   <div>
     <WebHeader />
-    <slot />
+    <slot></slot>
     <WebFooter />
   </div>
 </template>

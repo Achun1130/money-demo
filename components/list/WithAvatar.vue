@@ -1,15 +1,21 @@
 <script lang="ts" setup>
 defineProps({
-  title: String,
-  content: String,
+  title: {
+    type: String,
+    default: '',
+  },
+  content: {
+    type: String,
+    default: '',
+  },
 });
 </script>
 
 <template>
   <div class="flex gap-4 border-b border-b-black/20 pb-6">
     <div
-      class="flex h-10 w-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-full bg-primary-container text-primary-on-container"
       v-if="$slots.icon"
+      class="flex h-10 w-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-full bg-primary-container text-primary-on-container"
     >
       <slot name="icon"></slot>
     </div>

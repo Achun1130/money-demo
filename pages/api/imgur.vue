@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { UploadFile, UploadFiles, UploadRawFile } from 'element-plus';
+import type { UploadFile, UploadRawFile } from 'element-plus';
 
 definePageMeta({
   layout: 'demo',
@@ -15,7 +15,7 @@ const imageUrl = ref('');
 //     imageUrl.value = res.data.link;
 //   });
 
-function uploadFile(uploadFile: UploadFile, uploadFiles: UploadFiles): void {
+function uploadFile(uploadFile: UploadFile): void {
   const file = uploadFile;
   const formData = new FormData();
 

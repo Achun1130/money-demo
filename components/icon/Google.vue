@@ -16,6 +16,6 @@ defineProps({
 
 <template>
   <span :class="iconType" :style="{ fontSize: iconSize }">
-    <slot />
+    <slot></slot>
   </span>
 </template>

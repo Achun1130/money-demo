@@ -3,10 +3,9 @@ import type {
   FormInstance,
   FormRules,
   UploadFile,
-  UploadFiles,
   UploadRawFile,
 } from 'element-plus';
-import { TagType } from '~/shared/models/common.model';
+import { FormType, TagType } from '~/shared/models/common.model';
 import {
   FrontEndServiceItemStatusType,
   type FrontEndServiceForm,
@@ -131,8 +130,9 @@ function toggleFormDialogVisible(visible: boolean): void {
 /**
  * 開啟 表單互動視窗
  */
-function openFormDialog(title: string): void {
-  formDialogOption.title = title;
+function openFormDialog(id?: string): void {
+  formDialogOption.title =
+    t(`form.type.${id ? FormType.Edit : FormType.Add}`) + '服務項目';
   toggleFormDialogVisible(true);
 }
 
@@ -189,12 +189,7 @@ function deleteFile(index: number): void {
 <template>
   <!-- 新增服務項目 -->
   <div class="mb-8">
-    <el-button
-      type="primary"
-      round
-      size="large"
-      @click="openFormDialog('新增服務項目')"
-    >
+    <el-button type="primary" round size="large" @click="openFormDialog()">
       <icon-google class="mr-1"> add </icon-google>
       新增服務項目
     </el-button>
@@ -240,7 +235,7 @@ function deleteFile(index: number): void {
               text
               circle
               style="--button-circle-size: 1.75rem"
-              @click="openFormDialog('編輯服務項目')"
+              @click="openFormDialog(scope.row.id)"
             >
               <icon-google> edit </icon-google>
             </el-button>
@@ -258,11 +253,13 @@ function deleteFile(index: number): void {
       >
         <template #default="scope">
           <div class="m-1 flex items-center justify-center">
+            <!-- TODO: 要補刪除詢問視窗 -->
             <el-button
               type="primary"
               text
               circle
               style="--button-circle-size: 1.75rem"
+              @click="console.log(scope.row.id ,'刪除')"
             >
               <icon-google> delete </icon-google>
             </el-button>

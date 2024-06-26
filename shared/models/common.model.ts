@@ -18,6 +18,15 @@ export enum IconGoogleType {
   Filled = 'material-icons',
 }
 
+/**
+ * 1. Add: 新增
+ * 2. Edit: 編輯
+ */
+export enum FormType {
+  Add = 'add',
+  Edit = 'edit',
+}
+
 export interface TagTypeOption {
   text: string;
   type: TagType;

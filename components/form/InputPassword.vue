@@ -17,8 +17,8 @@ const visible = ref(false);
 
 <template>
   <el-input
-    :type="visible ? 'text' : 'password'"
     v-model="password"
+    :type="visible ? 'text' : 'password'"
     :placeholder="placeholder"
     :disabled="disabled"
   >

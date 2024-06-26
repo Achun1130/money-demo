@@ -1,7 +1,13 @@
 <script lang="ts" setup>
 defineProps({
-  title: String,
-  content: String,
+  title: {
+    type: String,
+    default: '',
+  },
+  content: {
+    type: String,
+    default: '',
+  },
 });
 
 defineEmits(['onClickBtn']);

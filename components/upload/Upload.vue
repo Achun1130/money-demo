@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { UploadFile, UploadFiles } from 'element-plus';
+import type { UploadFile } from 'element-plus';
 import type { FormImage } from '~/shared/models/common.model';
 
 defineProps({
@@ -18,7 +18,7 @@ const emit = defineEmits(['onUploadImage', 'onDeleteImage']);
 /**
  * 上傳檔案
  */
-function uploadFile(uploadFile: UploadFile, uploadFiles: UploadFiles): void {
+function uploadFile(uploadFile: UploadFile): void {
   emit('onUploadImage', uploadFile);
 }
 

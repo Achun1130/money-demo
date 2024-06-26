@@ -30,14 +30,14 @@ const visible = defineModel<boolean>('visible', { required: true });
       :title="title"
       :show-close="false"
       :class="dialogClass"
-      @closed="$emit('onClosed')"
       align-center
+      @closed="$emit('onClosed')"
     >
       <template #header>
         <slot name="header"> </slot>
       </template>
 
-      <slot />
+      <slot></slot>
 
       <template #footer>
         <div class="px-8 py-6">
@@ -46,8 +46,8 @@ const visible = defineModel<boolean>('visible', { required: true });
             round
             plain
             size="large"
-            @click="$emit('onClickLeftBtn')"
             style="--button-padding-horizontal-large: 2.625rem"
+            @click="$emit('onClickLeftBtn')"
           >
             {{ leftBtnText }}
           </el-button>
@@ -56,8 +56,8 @@ const visible = defineModel<boolean>('visible', { required: true });
             type="primary"
             round
             size="large"
-            @click="$emit('onClickRightBtn')"
             style="--button-padding-horizontal-large: 2.625rem"
+            @click="$emit('onClickRightBtn')"
           >
             {{ rightBtnText }}
           </el-button>

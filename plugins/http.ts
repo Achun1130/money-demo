@@ -1,4 +1,5 @@
-import axios, { AxiosError, type AxiosResponse } from 'axios';
+import axios from 'axios';
+import type { AxiosError, AxiosResponse } from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 
 import { mockData } from '~/shared/mock-data';
@@ -15,9 +16,9 @@ export default defineNuxtPlugin(({ $config }) => {
   const http = axios.create({
     baseURL: $config.public.apiServer,
     headers: {
-    //   post: {
-    //     'Content-Type': 'application/json',
-    //   },
+      // post: {
+      //   'Content-Type': 'application/json',
+      // },
       common: {
         Authorization: `Client-ID ${$config.public.imgur.clientId}`,
       },
@@ -78,7 +79,7 @@ export default defineNuxtPlugin(({ $config }) => {
         return methodPatch(action, params);
       case RequestMethod.Delete:
         return methodDelete(action);
-      default:
+      default: {
         const message = 'Not allow method';
 
         ElMessage({
@@ -88,6 +89,7 @@ export default defineNuxtPlugin(({ $config }) => {
         });
 
         return Promise.reject(message);
+      }
     }
   }
 
@@ -102,7 +104,7 @@ export default defineNuxtPlugin(({ $config }) => {
 
     if (!useFakeData) {
       Object.entries(replacePathParams).forEach(([key, value]) => {
-        let re = new RegExp(`{${key}}`, 'g');
+        const re = new RegExp(`{${key}}`, 'g');
 
         newPath = newPath.replace(re, value as string);
       });

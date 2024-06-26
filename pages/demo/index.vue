@@ -55,11 +55,11 @@ const links = reactive<Link[]>([
 <template>
   <div class="flex flex-wrap gap-4 p-20">
     <el-button
+      v-for="link in links"
+      :key="link.title"
       type="primary"
       text
       @click="navigateTo({ path: link.path })"
-      v-for="link in links"
-      :key="link.title"
     >
       {{ link.title }}
     </el-button>

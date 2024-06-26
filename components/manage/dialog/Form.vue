@@ -27,7 +27,7 @@ const visible = defineModel<boolean>('visible', { required: true });
   <dialog-confirm
     v-model:visible="visible"
     :title="title"
-    :dialogClass="dialogClass"
+    :dialog-class="dialogClass"
     :left-btn-text="leftBtnText"
     :right-btn-text="rightBtnText"
     @on-closed="$emit('onClosed')"
@@ -52,7 +52,7 @@ const visible = defineModel<boolean>('visible', { required: true });
     </template>
 
     <div class="border-b border-t border-outline-variant px-8 py-10">
-      <slot />
+      <slot></slot>
     </div>
   </dialog-confirm>
 </template>
