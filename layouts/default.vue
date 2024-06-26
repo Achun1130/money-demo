@@ -1,7 +1,18 @@
 <template>
-  <div>
-    <WebHeader />
-    <slot></slot>
-    <WebFooter />
+  <div class="common-layout bg-primary-99">
+    <div class="common-layout__header bg-white">
+      <layout-header>
+        <WebHeader />
+      </layout-header>
+    </div>
+
+    <div class="common-layout__content overflow-auto">
+      <main>
+        <slot></slot>
+      </main>
+
+      <!-- TODO: WebFooter 待補 -->
+      <!-- <WebFooter /> -->
+    </div>
   </div>
 </template>

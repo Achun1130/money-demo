@@ -26,7 +26,7 @@ defineEmits(['onClickBtn']);
       }"
     ></div>
 
-    <div class="p-5">
+    <div class="bg-white p-5">
       <div class="text-headline-l font-bold text-surface-on">
         {{ title }}
       </div>

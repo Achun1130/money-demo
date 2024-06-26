@@ -14,7 +14,7 @@ defineEmits(['onClickBtn']);
 </script>
 
 <template>
-  <div class="flex flex-col gap-4 rounded-2xl p-5 shadow-card">
+  <div class="flex flex-col gap-4 rounded-2xl bg-white p-5 shadow-card">
     <div class="flex">
       <div class="mr-auto text-headline-l font-bold text-surface-on">
         {{ title }}

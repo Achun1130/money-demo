@@ -12,6 +12,10 @@ defineProps({
     type: String,
     default: '',
   },
+  lineClamp: {
+    type: [String, Number] as PropType<'none' | number>,
+    default: 2,
+  },
 });
 
 defineEmits(['onClickBtn']);
@@ -42,7 +46,15 @@ defineEmits(['onClickBtn']);
 
     <p
       v-if="content"
-      class="mt-2 line-clamp-2 break-words text-button-l text-surface-on"
+      class="mt-2 break-words text-button-l text-surface-on"
+      style="
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+      "
+      :style="{
+        '-webkit-line-clamp': lineClamp,
+      }"
     >
       {{ content }}
     </p>
