@@ -1,1 +1,0 @@
-import{d as a,t as n,S as o,A as r,V as s,W as m}from"./BJP_0rNl.js";const c=a({__name:"Header",props:{element:{type:String,default:"header"}},setup(e){return(t,l)=>(n(),o(m(e.element),{class:"mx-auto max-w-[90rem] px-14"},{default:r(()=>[s(t.$slots,"default")]),_:3}))}});export{c as _};
