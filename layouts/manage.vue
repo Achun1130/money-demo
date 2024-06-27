@@ -1,16 +1,13 @@
 <template>
   <div class="common-layout bg-primary-99">
-    <div class="common-layout__header bg-white">
+    <header class="common-layout__header bg-white">
       <layout-header>
         <ManageHeader />
       </layout-header>
-    </div>
+    </header>
 
     <div class="common-layout__content overflow-auto">
-      <layout-header
-        element="div"
-        class="common-layout__content mb-12 mt-[3.75rem]"
-      >
+      <layout-header class="common-layout__content mb-12 mt-[3.75rem]">
         <div class="flex flex-1 overflow-hidden rounded-2xl">
           <div class="w-[300px] shrink-0 bg-primary-container">
             <manage-menu />

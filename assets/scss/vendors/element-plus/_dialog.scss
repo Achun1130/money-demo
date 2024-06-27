@@ -17,6 +17,11 @@
   &.dialog--sm {
     max-width: var(--dialog-size-sm);
   }
+
+  // custom
+  &.dialog--xs {
+    max-width: var(--dialog-size-xs);
+  }
 }
 
 #money .el-overlay-dialog {

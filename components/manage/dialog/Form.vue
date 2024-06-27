@@ -45,6 +45,7 @@ const visible = defineModel<boolean>('visible', { required: true });
           circle
           class="flex-shrink-0"
           style="--button-circle-size: 2rem"
+          @click="$emit('onClosed')"
         >
           <icon-google> close </icon-google>
         </el-button>

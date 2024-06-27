@@ -1,10 +1,10 @@
 <template>
   <div class="common-layout bg-primary-99">
-    <div class="common-layout__header bg-white">
+    <header class="common-layout__header bg-white">
       <layout-header>
         <WebHeader />
       </layout-header>
-    </div>
+    </header>
 
     <div class="common-layout__content overflow-auto">
       <main>

@@ -36,9 +36,6 @@ export default defineNuxtConfig({
     /** Options */
     importStyle: 'scss',
   },
-  eslint: {
-    checker: true,
-  },
   typescript: {
     typeCheck: true,
   },

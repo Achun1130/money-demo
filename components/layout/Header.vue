@@ -2,7 +2,7 @@
 defineProps({
   element: {
     type: String,
-    default: 'header',
+    default: 'div',
   },
 });
 </script>

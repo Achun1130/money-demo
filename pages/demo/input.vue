@@ -96,9 +96,9 @@ const textareaFormRules = computed<FormRules<TextareaForm>>(() => ({
   ],
 }));
 
-const submitBasicInputForm = async (formEl: FormInstance | undefined) => {
-  if (!formEl) return;
-  await formEl.validate((valid, fields) => {
+const submitBasicInputForm = async () => {
+  if (!basicInputFormRef.value) return;
+  await basicInputFormRef.value.validate((valid, fields) => {
     if (valid) {
       console.log('submit!');
     } else {
@@ -107,9 +107,9 @@ const submitBasicInputForm = async (formEl: FormInstance | undefined) => {
   });
 };
 
-const resetBasicInputForm = (formEl: FormInstance | undefined) => {
-  if (!formEl) return;
-  formEl.resetFields();
+const resetBasicInputForm = () => {
+  if (!basicInputFormRef.value) return;
+  basicInputFormRef.value.resetFields();
 };
 </script>
 
@@ -125,17 +125,10 @@ const resetBasicInputForm = (formEl: FormInstance | undefined) => {
     </div>
 
     <div class="flex gap-4">
-      <el-button
-        type="primary"
-        @click="submitBasicInputForm(basicInputFormRef)"
-      >
+      <el-button type="primary" @click="submitBasicInputForm">
         {{ $t('input.submit') }}
       </el-button>
-      <el-button
-        type="primary"
-        plain
-        @click="resetBasicInputForm(basicInputFormRef)"
-      >
+      <el-button type="primary" plain @click="resetBasicInputForm">
         {{ $t('input.reset') }}
       </el-button>
     </div>

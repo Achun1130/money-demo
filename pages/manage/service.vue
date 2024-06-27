@@ -74,7 +74,7 @@ const tableData = reactive<FrontEndServiceItem[]>([
 /**
  * 表單互動視窗 參數
  */
-const formDialogOption = reactive({
+const dialogFormOption = reactive({
   visible: false,
   title: '',
 });
@@ -123,35 +123,33 @@ const formRef = ref<FormInstance>();
  * 切換 表單互動視窗 參數 顯示
  * @param visible 顯示
  */
-function toggleFormDialogVisible(visible: boolean): void {
-  formDialogOption.visible = visible;
+function toggleDialogFormVisible(visible: boolean): void {
+  dialogFormOption.visible = visible;
 }
 
 /**
  * 開啟 表單互動視窗
  */
-function openFormDialog(id?: string): void {
-  formDialogOption.title =
+function openDialogForm(id?: string): void {
+  dialogFormOption.title =
     t(`form.type.${id ? FormType.Edit : FormType.Add}`) + '服務項目';
-  toggleFormDialogVisible(true);
+  toggleDialogFormVisible(true);
 }
 
 /**
  * 關閉 表單互動視窗
- * @param formEl 表單元素
  */
-function closeFormDialog(formEl: FormInstance | undefined): void {
-  resetForm(formEl);
-  toggleFormDialogVisible(false);
+function closeDialogForm(): void {
+  resetForm(formRef.value);
+  toggleDialogFormVisible(false);
 }
 
 /**
  * 確認 表單互動視窗
- * @param formEl 表單元素
  */
-function confirmFormDialog(formEl: FormInstance | undefined): void {
-  submitForm(formEl, () => {
-    toggleFormDialogVisible(false);
+function confirmDialogForm(): void {
+  submitForm(formRef.value, () => {
+    toggleDialogFormVisible(false);
     console.log(toRaw(form).images);
   });
 }
@@ -189,7 +187,7 @@ function deleteFile(index: number): void {
 <template>
   <!-- 新增服務項目 -->
   <div class="mb-8">
-    <el-button type="primary" round size="large" @click="openFormDialog()">
+    <el-button type="primary" round size="large" @click="openDialogForm()">
       <icon-google class="mr-1"> add </icon-google>
       新增服務項目
     </el-button>
@@ -235,7 +233,7 @@ function deleteFile(index: number): void {
               text
               circle
               style="--button-circle-size: 1.75rem"
-              @click="openFormDialog(scope.row.id)"
+              @click="openDialogForm(scope.row.id)"
             >
               <icon-google> edit </icon-google>
             </el-button>
@@ -259,7 +257,7 @@ function deleteFile(index: number): void {
               text
               circle
               style="--button-circle-size: 1.75rem"
-              @click="console.log(scope.row.id ,'刪除')"
+              @click="console.log(scope.row.id, '刪除')"
             >
               <icon-google> delete </icon-google>
             </el-button>
@@ -273,12 +271,12 @@ function deleteFile(index: number): void {
 
   <!-- 表單互動視窗 互動視窗 -->
   <manage-dialog-form
-    v-model:visible="formDialogOption.visible"
-    :title="formDialogOption.title"
+    v-model:visible="dialogFormOption.visible"
+    :title="dialogFormOption.title"
     dialog-class="dialog--md"
-    @on-closed="closeFormDialog(formRef)"
-    @on-click-left-btn="closeFormDialog(formRef)"
-    @on-click-right-btn="confirmFormDialog(formRef)"
+    @on-closed="closeDialogForm"
+    @on-click-left-btn="closeDialogForm"
+    @on-click-right-btn="confirmDialogForm"
   >
     <el-form
       ref="formRef"
