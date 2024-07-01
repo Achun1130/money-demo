@@ -1,1 +1,0 @@
-import{n as a,o as n,z as o,w as s,C as r,E as m}from"./CdoEpQFN.js";const c=a({__name:"Header",props:{element:{type:String,default:"div"}},setup(e){return(t,l)=>(n(),o(m(e.element),{class:"mx-auto max-w-[90rem] px-14"},{default:s(()=>[r(t.$slots,"default")]),_:3}))}});export{c as _};

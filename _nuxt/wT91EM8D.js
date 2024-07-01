@@ -1,0 +1,1 @@
+import{n,B as o,o as u,c as i,E as a,u as s}from"./Dwv-tNMU.js";const p=n({__name:"Donut",props:{outerSize:{type:Number,default:531},innerSize:{type:Number,default:336}},setup(e){const t=e,r=o(()=>(t.outerSize-t.innerSize)/2);return(c,l)=>(u(),i("div",{class:"rounded-full",style:a({width:e.outerSize+"px",height:e.outerSize+"px",borderWidth:s(r)+"px"})},null,4))}});export{p as _};
