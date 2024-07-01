@@ -178,6 +178,8 @@ export default {
       'input-focused': '0 0 10px 0 rgba(var(--sys-color-primary-40), 0.2)',
       // TODO: 暫時命名為 header，目前只使用在 header 上
       header: '0 2px 10px 0 rgba(0, 0, 0, 0.16)',
+      // TODO: 暫時命名為 member，目前只使用在 member 上
+      member: '0 2px 20px 0 rgba(0, 0, 0, 0.16)',
     },
   },
   plugins: [],

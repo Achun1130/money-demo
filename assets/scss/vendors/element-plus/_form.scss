@@ -1,10 +1,16 @@
 #money {
   .el-form-item {
     margin-bottom: var(--form-item-error-height);
+
+    &__error {
+      --el-color-danger: rgb(var(--sys-color-error));
+
+      @apply text-label font-bold;
+    }
   }
 
   .el-form-item__label {
-    @apply text-label font-bold;
+    @apply text-label font-bold text-surface-on-variant;
   }
 
   .el-input,
@@ -35,6 +41,14 @@
       @apply shadow-input-focused;
     }
 
+    &__prefix-inner > :last-child {
+      margin-right: var(--input-icon-gap);
+    }
+
+    &__suffix-inner > :first-child {
+      margin-left: var(--input-icon-gap);
+    }
+
     .el-input__icon {
       font-size: var(--input-icon-font-size);
     }
@@ -60,17 +74,20 @@
     }
   }
 
-  .el-form-item__error {
-    --el-color-danger: rgb(var(--sys-color-error));
+  .el-checkbox {
+    --el-checkbox-font-size: var(--checkbox-size);
+    --el-checkbox-font-weight: var(--checkbox-font-weight);
+    --el-checkbox-text-color: rgba(var(--sys-color-on-surface-variant));
+    --el-checkbox-input-height: var(--checkbox-size);
+    --el-checkbox-input-width: var(--checkbox-size);
+    --el-checkbox-bg-color: rgb(var(--sys-color-on-primary));
+    --el-checkbox-input-border: 1px solid rgb(var(--sys-color-outline));
+    --el-checkbox-checked-text-color: rgba(var(--sys-color-on-surface-variant));
+    --el-checkbox-checked-input-border-color: rgb(var(--sys-color-primary));
+    --el-checkbox-checked-bg-color: rgb(var(--sys-color-primary));
+    --el-checkbox-checked-icon-color: rgb(var(--sys-color-on-primary));
+    --el-checkbox-input-border-color-hover: rgb(var(--sys-color-primary));
 
-    @apply text-label font-bold;
-  }
-
-  .el-input__prefix-inner > :last-child {
-    margin-right: var(--input-icon-gap);
-  }
-
-  .el-input__suffix-inner > :first-child {
-    margin-left: var(--input-icon-gap);
+    --el-checkbox-height: var(--checkbox-height);
   }
 }

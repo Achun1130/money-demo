@@ -11,5 +11,9 @@
 
   &__content {
     @apply flex w-full flex-1 flex-col;
+
+    > *:first-child {
+      @apply w-full flex-1;
+    }
   }
 }

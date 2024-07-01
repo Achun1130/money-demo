@@ -28,7 +28,7 @@ const visible = ref(false);
         type="primary"
         text
         style="--button-padding-horizontal: 0.75rem"
-        class="-mr-2.5"
+        class="-mr-2.5 !ml-0"
         @click="visible = !visible"
       >
         <icon-google v-if="visible">visibility</icon-google>

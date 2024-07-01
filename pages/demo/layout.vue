@@ -31,7 +31,9 @@ definePageMeta({
     </div>
 
     <div>
-      <div class="relative mx-auto max-w-[90rem] bg-primary-95 px-[7.5rem]">
+      <div
+        class="relative mx-auto max-w-[90rem] bg-primary-95 px-[7.5rem]"
+      >
         <div
           class="absolute bottom-0 left-0 right-0 top-0 z-10 flex items-center justify-center text-display-s text-primary-10"
         >

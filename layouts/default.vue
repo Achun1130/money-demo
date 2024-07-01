@@ -7,7 +7,7 @@
     </header>
 
     <div class="common-layout__content overflow-auto">
-      <main>
+      <main class="common-layout__content">
         <slot></slot>
       </main>
 

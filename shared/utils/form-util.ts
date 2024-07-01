@@ -40,3 +40,13 @@ export function submitForm(
 export function sortValidator(value: number): boolean {
   return Number.isInteger(value) && Math.sign(value) === 1;
 }
+
+/**
+ * 確認 傳入的兩個值 是否相同 驗證器
+ * 主要給密碼與確認密碼用
+ * @param valueOne 值 1
+ * @param valueTwo 值 2
+ */
+export function checkSameValueValidator(valueOne: any, valueTwo: any) {
+  return valueOne === valueTwo;
+}

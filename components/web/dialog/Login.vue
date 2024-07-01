@@ -12,6 +12,7 @@ const { t } = useI18n();
 const form = reactive<FrontEndLoginForm>({
   username: null,
   password: null,
+  staySignedIn: false,
 });
 
 const formRules = computed<FormRules<FrontEndLoginForm>>(() => ({
@@ -37,6 +38,7 @@ const formRef = ref<FormInstance>();
 function login(): void {
   submitForm(formRef.value, () => {
     console.log(toRaw(form));
+    // TODO: 除了使用登入 API 外，還要額外處理保持登入的狀態（看 token 保存在哪裡，false 狀態多久過期，true 狀態永不過期）
     closeDialog();
   });
 }
@@ -46,6 +48,14 @@ function login(): void {
  */
 function register(): void {
   navigateTo({ path: '/member/register' });
+  closeDialog();
+}
+
+/**
+ * 忘記密碼
+ */
+function forget(): void {
+  navigateTo({ path: '/member/forget' });
   closeDialog();
 }
 
@@ -83,7 +93,7 @@ function closeDialog(): void {
       </template>
 
       <div class="flex flex-col gap-6 px-[3.75rem] pb-12 pt-3">
-        <h3 class="text-center text-headline-s font-bold">登入</h3>
+        <h3 class="text-center text-headline-s font-bold text-black">登入</h3>
 
         <el-form
           ref="formRef"
@@ -102,7 +112,30 @@ function closeDialog(): void {
             />
           </el-form-item>
 
-          <!-- TODO: 保持登入 checkbox / 忘記密碼？ route 待補 -->
+          <el-form-item class="!mb-0">
+            <div class="flex w-full justify-between">
+              <el-checkbox
+                v-model="form.staySignedIn"
+                label="保持登入"
+                style="--checkbox-height: 0.875rem"
+              />
+
+              <el-button
+                type="primary"
+                text
+                style="
+                  --button-height: 0.875rem;
+                  --button-font-size: 0.875rem;
+                  --button-padding-vertical: 0;
+                  --button-padding-horizontal: 0;
+                "
+                class="!font-normal"
+                @click="forget"
+              >
+                忘記密碼 ?
+              </el-button>
+            </div>
+          </el-form-item>
         </el-form>
 
         <el-button type="primary" round size="large" @click="login">

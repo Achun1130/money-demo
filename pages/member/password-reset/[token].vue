@@ -1,23 +1,18 @@
 <script lang="ts" setup>
 import type { FormInstance, FormRules } from 'element-plus';
-import type { FrontEndRegisterForm } from '~/shared/models/web/member.model';
+import type { FrontEndPasswordResetForm } from '~/shared/models/web/member.model';
 import { checkSameValueValidator, submitForm } from '~/shared/utils/form-util';
 
 const { t } = useI18n();
 
-const form = reactive<FrontEndRegisterForm>({
-  username: null,
+const route = useRoute();
+
+const form = reactive<FrontEndPasswordResetForm>({
   password: null,
   checkPassword: null,
 });
 
-const formRules = computed<FormRules<FrontEndRegisterForm>>(() => ({
-  username: [
-    {
-      required: true,
-      message: t('input.confirm_password.message'),
-    },
-  ],
+const formRules = computed<FormRules<FrontEndPasswordResetForm>>(() => ({
   password: [
     {
       required: true,
@@ -39,20 +34,20 @@ const formRules = computed<FormRules<FrontEndRegisterForm>>(() => ({
 const formRef = ref<FormInstance>();
 
 /**
- * 註冊
+ * 送出
  */
-function register(): void {
+function submit(): void {
   submitForm(formRef.value, () => {
     console.log(toRaw(form));
+
+    // TODO: 會員重設密碼 API 會需要 reset-token
+    console.log(route.params.token);
   });
 }
 </script>
 
 <template>
-  <layout-member
-    title="註冊"
-    content="註冊享有免費試用 30 天，並享有眾多會員專屬優惠，馬上加入體驗 !"
-  >
+  <layout-member title="重設密碼">
     <template #right>
       <el-form
         ref="formRef"
@@ -61,10 +56,6 @@ function register(): void {
         label-position="top"
         class="mb-8 border-b border-b-black/20"
       >
-        <el-form-item label="帳號" prop="username">
-          <el-input v-model="form.username" placeholder="請輸入帳號" />
-        </el-form-item>
-
         <el-form-item label="密碼" prop="password">
           <form-input-password
             v-model:password="form.password"
@@ -85,9 +76,9 @@ function register(): void {
         round
         size="large"
         class="w-full"
-        @click="register"
+        @click="submit"
       >
-        註冊
+        送出
       </el-button>
     </template>
   </layout-member>
